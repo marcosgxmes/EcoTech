@@ -1,4 +1,4 @@
-# ♻️ EcoTech
+## ♻️ EcoTech
 
 > **Tecnologia, conscientização e sustentabilidade em um novo ciclo.**
 
