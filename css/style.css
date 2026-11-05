@@ -222,6 +222,8 @@ button:focus-visible {
   transition: transform 0.25s ease, opacity 0.25s ease;
 }
 
+
+
 /* ===== MOBILE ===== */
 @media (max-width: 768px) {
   .header-content {
