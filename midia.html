@@ -118,7 +118,7 @@
                         </div>
                     </article>
 
-                    <!-- Bloco do Vídeo Incorporado -->
+                     <!-- Bloco de Iframe -->
                     <article class="info-card" style="padding: 40px;">
                         <div class="card-icon" aria-hidden="true">📺</div>
                         <h3>Conteúdo em Destaque (YouTube)</h3>
@@ -127,13 +127,19 @@
                             resíduos.
                         </p>
 
-                        <!-- Player do YouTube incorporado com suporte responsivo -->
-                        <div class="video-container">
-                            <iframe width="1331" height="749" src="https://www.youtube.com/embed/OsagLEoAgjc"
-                                title="Lixo eletrônico entenda a importância de descartar corretamente" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        </div>
+                        <!-- Imagem com link direto para abrir o vídeo numa nova aba -->
+                        <a href="https://www.youtube.com/watch?v=OsagLEoAgjc" target="_blank" rel="noopener noreferrer"
+                            style="position: relative; display: block; border-radius: 10px; overflow: hidden;">
+                            <!-- Capa do vídeo -->
+                            <img src="images/capa-lixo-eletronico.webp" alt="Capa do vídeo em destaque no YouTube"
+                                style="width: 100%; display: block; border-radius: 10px;">
+
+                            <!-- Botão de Play centralizado por cima da imagem -->
+                            <div
+                                style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: rgba(0, 0, 0, 0.7); color: #fff; width: 60px; height: 60px; border-radius: 50%; display: grid; place-items: center; font-size: 24px; transition: background-color 0.2s;">
+                                <i class="fa-solid fa-play" style="margin-left: 3px;"></i>
+                            </div>
+                        </a>
                     </article>
 
                 </div>
