@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Biblioteca multimídia da EcoTech com vídeos, áudios e conteúdos interativos sobre sustentabilidade." />
+    <meta name="author" content="EcoTech" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+
+    <title>EcoTech - Mídia e Recursos Multimídia</title>
+
+    <link rel="stylesheet" href="css/stylemidia.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+</head>
+
+<body>
+    <!-- Link para facilitar a navegação por teclado -->
+    <a href="#conteudo" class="skip-link"> Pular para o conteúdo principal </a>
+
+    <!-- CABEÇALHO COM AS 10 PÁGINAS OFICIAIS CORRETAS -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="index.html" class="logo" aria-label="EcoTech - Página inicial">
+                <span class="logo-icon" aria-hidden="true">♻</span>
+                <span>Eco<span>Tech</span></span>
+            </a>
+
+            <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false"
+                aria-controls="menu-principal">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav id="menu-principal" class="navigation" aria-label="Navegação principal">
+                <ul class="nav-list">
+                    <li>
+                        <a href="#inicio" class="active"> Início </a>
+                    </li>
+
+                    <li>
+                        <a href="#sobre"> Sobre </a>
+                    </li>
+
+                    <li>
+                        <a href="#impacto-ambiental"> Impacto </a>
+                    </li>
+
+                    <li>
+                        <a href="#descarte"> Descarte correto </a>
+                    </li>
+
+                    <!-- NOVO MENU DROPDOWN "MÍDIA" -->
+                    <li class="dropdown">
+                        <a href="#" class="drop-btn">Mídia <i class="fa-solid fa-chevron-down"
+                                style="font-size: 10px;"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="galeria.html">Galeria</a></li>
+                            <li><a href="midia.html">Multimídia</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#contato"> Contato </a>
+                    </li>
+                </ul>
+        </div>
+    </header>
+
+    <main id="conteudo">
+        <!-- CONTEÚDO PRINCIPAL DE MÍDIA -->
+        <section class="section about">
+            <div class="container" style="max-width: 1200px;">
+
+                <div class="section-heading" style="max-width: 100%; margin-bottom: 40px;">
+                    <span class="section-label"> Biblioteca Multimídia </span>
+                    <h2>Conteúdos em Vídeo, Áudio e Incorporações</h2>
+                    <p>
+                        Explore nossos vídeos educativos, podcasts e conteúdos interativos sobre sustentabilidade,
+                        reciclagem e impacto ambiental.
+                    </p>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr; gap: 30px;">
+
+                    <!-- Bloco de Vídeo -->
+                    <article class="info-card" style="padding: 40px;">
+                        <div class="card-icon" aria-hidden="true">🎬</div>
+                        <h3>Vídeo Educativo: O Destino do Lixo Eletrônico</h3>
+                        <p style="margin-bottom: 25px; color: var(--gray);">
+                            Assista ao vídeo gerado por IA sobre a reutilização de eletrônicos e economia circular.
+                        </p>
+                        <div style="width: 100%;">
+                            <!-- A tag video puxa o arquivo salvo na pasta assets com controles ativos -->
+                            <video controls poster="images/capa-video.webp" width="100%"
+                                style="border-radius: 10px; height: auto; object-fit: contain; background-color: #000;">
+                                <source src="assets/video-sustentabilidade.mp4" type="video/mp4">
+                                Seu navegador não suporta a tag de vídeo.
+                            </video>
+                        </div>
+                    </article>
+
+                    <!-- Bloco de Áudio -->
+                    <article class="info-card" style="padding: 40px;">
+                        <div class="card-icon" aria-hidden="true">🎧</div>
+                        <h3>Podcast EcoTech: Episódio Especial</h3>
+                        <p style="margin-bottom: 25px; color: var(--gray);">
+                            Ouça nosso bate-papo exclusivo sobre a reutilização de eletrónicos antigos e o impacto
+                            positivo de dar uma nova vida aos aparelhos.
+                        </p>
+                        <div>
+                            <audio controls style="width: 100%;">
+                                <source src="assets/podcast-ecotech.mp3" type="audio/mpeg">
+                                Seu navegador não suporta a tag de áudio.
+                            </audio>
+                        </div>
+                    </article>
+
+                    <!-- Bloco do Vídeo Incorporado -->
+                    <article class="info-card" style="padding: 40px;">
+                        <div class="card-icon" aria-hidden="true">📺</div>
+                        <h3>Conteúdo em Destaque (YouTube)</h3>
+                        <p style="margin-bottom: 25px; color: var(--gray);">
+                            Acompanhe reportagens e documentários relacionados à tecnologia sustentável e gestão de
+                            resíduos.
+                        </p>
+
+                        <!-- Player do YouTube incorporado com suporte responsivo -->
+                        <div class="video-container">
+                            <iframe width="1331" height="749" src="https://www.youtube.com/embed/OsagLEoAgjc"
+                                title="Lixo eletrônico entenda a importância de descartar corretamente" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Botão flutuante do WhatsApp -->
+        <a href="https://wa.me/5511999999999" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
+            aria-label="Entre em contato com a EcoTech pelo WhatsApp" title="Fale conosco pelo WhatsApp">
+            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+        </a>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer id="contato" class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="#inicio" class="logo">
+                    <span class="logo-icon" aria-hidden="true">♻</span>
+                    <span>Eco<span>Tech</span></span>
+                </a>
+
+                <p>Informação e conscientização para um futuro mais sustentável.</p>
+            </div>
+
+            <div class="footer-column">
+                <h2>Navegação</h2>
+
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="projetos.html">Projetos</a></li>
+                    <li><a href="impacto.html">Impacto</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h2>Projeto</h2>
+
+                <p>
+                    Projeto acadêmico desenvolvido para a disciplina de Desenvolvimento Web.
+                </p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p>© 2026 EcoTech. Projeto acadêmico.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navigation = document.querySelector('.navigation');
+
+            if (menuToggle && navigation) {
+                menuToggle.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    navigation.classList.toggle('is-open');
+                    const isOpen = navigation.classList.contains('is-open');
+                    menuToggle.setAttribute('aria-expanded', isOpen);
+                });
+
+                // Fecha o menu se clicar fora dele no celular
+                document.addEventListener('click', function (event) {
+                    if (!navigation.contains(event.target) && !menuToggle.contains(event.target)) {
+                        navigation.classList.remove('is-open');
+                        menuToggle.setAttribute('aria-expanded', 'false');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
