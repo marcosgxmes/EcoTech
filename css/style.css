@@ -223,8 +223,6 @@ button:focus-visible {
   transition: transform 0.25s ease, opacity 0.25s ease;
 }
 
-
-
 /* ===== MOBILE ===== */
 @media (max-width: 768px) {
   .header-content {
@@ -1324,4 +1322,102 @@ button:focus-visible {
   *::after {
     transition: none !important;
   }
+}
+/* --- ESTILOS DO MENU DROPDOWN DE MÍDIA --- */
+
+/* Posicionamento relativo para o item pai do menu */
+.nav-list .dropdown {
+    position: relative;
+}
+
+/* O sub-menu (fica escondido por padrão) */
+.nav-list .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    list-style: none;
+    padding: 8px 0;
+    z-index: 999;
+    border: 1px solid #E5E7EB;
+}
+
+/* Mostra o sub-menu quando o mouse passa em cima de "Mídia" */
+.nav-list .dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Estilo dos links dentro do sub-menu */
+.nav-list .dropdown-menu li {
+    display: block;
+    margin: 0;
+}
+
+.nav-list .dropdown-menu li a {
+    color: #166534 !important;
+    padding: 10px 20px;
+    display: block;
+    white-space: nowrap;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+/* Efeito ao passar o mouse nas opções do sub-menu */
+.nav-list .dropdown-menu li a:hover {
+    background-color: #F3F4F6;
+}
+/* --- CORREÇÃO DO MENU DROPDOWN NO CSS PRINCIPAL --- */
+
+/* Torna o item pai do menu relativo para ancorar o submenu */
+.nav-list .dropdown {
+    position: relative;
+}
+
+/* Esconde o submenu por padrão e o posiciona flutuando logo abaixo */
+.nav-list .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    list-style: none;
+    padding: 8px 0;
+    z-index: 999;
+    border: 1px solid #E5E7EB;
+}
+
+/* Mostra o submenu quando o mouse passa em cima de "Mídia" */
+.nav-list .dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Estilo dos links de dentro do submenu */
+.nav-list .dropdown-menu li {
+    display: block;
+    margin: 0;
+}
+
+.nav-list .dropdown-menu li a {
+    color: #166534 !important;
+    padding: 10px 20px;
+    display: block;
+    white-space: nowrap;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+/* Efeito hover nos itens do submenu */
+.nav-list .dropdown-menu li a:hover {
+    background-color: #F3F4F6;
 }

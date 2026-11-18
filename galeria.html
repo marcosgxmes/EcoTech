@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Galeria ambiental da EcoTech com registros visuais sobre sustentabilidade e descarte correto." />
+    <meta name="author" content="EcoTech" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+
+    <title>EcoTech - Galeria Ambiental</title>
+
+    <link rel="stylesheet" href="css/stylemidia.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+    <style>
+        /* Estilos específicos para a Galeria e o Modal (Lightbox) */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .gallery-card {
+            background-color: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            border: 1px solid #E5E7EB;
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .gallery-content {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .gallery-content h3 {
+            font-size: 18px;
+            color: var(--primary, #166534);
+            margin-bottom: 10px;
+        }
+
+        .gallery-content p {
+            color: var(--gray, #6B7280);
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 15px;
+            flex: 1;
+        }
+
+        .gallery-source {
+            font-size: 12px;
+            color: var(--secondary, #22C55E);
+            font-weight: 600;
+            border-top: 1px solid #F3F4F6;
+            padding-top: 10px;
+        }
+
+        /* Modal Lightbox (Zoom na tela) */
+        .lightbox-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.85);
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .lightbox-modal.active {
+            display: flex;
+        }
+
+        .lightbox-content {
+            max-width: 900px;
+            width: 100%;
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+            position: relative;
+            animation: scaleUp 0.3s ease;
+        }
+
+        @keyframes scaleUp {
+            from {
+                transform: scale(0.9);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .lightbox-content img {
+            width: 100%;
+            max-height: 60vh;
+            object-fit: contain;
+            background-color: #000;
+            display: block;
+        }
+
+        .lightbox-body {
+            padding: 25px;
+        }
+
+        .lightbox-body h3 {
+            color: var(--primary, #166534);
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .lightbox-body p {
+            color: var(--gray, #6B7280);
+            font-size: 15px;
+            margin-bottom: 15px;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 20px;
+            cursor: pointer;
+            display: grid;
+            place-items: center;
+            transition: background 0.2s;
+            z-index: 10;
+        }
+
+        .lightbox-close:hover {
+            background: rgba(0, 0, 0, 0.9);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Link para facilitar a navegação por teclado -->
+    <a href="#conteudo" class="skip-link"> Pular para o conteúdo principal </a>
+
+    <!-- CABEÇALHO IDÊNTICO À PÁGINA DE MÍDIA -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="index.html" class="logo" aria-label="EcoTech - Página inicial">
+                <span class="logo-icon" aria-hidden="true">♻</span>
+                <span>Eco<span>Tech</span></span>
+            </a>
+
+            <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false"
+                aria-controls="menu-principal">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav id="menu-principal" class="navigation" aria-label="Navegação principal">
+                <ul class="nav-list">
+                    <li>
+                        <a href="#inicio" class="active"> Início </a>
+                    </li>
+
+                    <li>
+                        <a href="#sobre"> Sobre </a>
+                    </li>
+
+                    <li>
+                        <a href="#impacto-ambiental"> Impacto </a>
+                    </li>
+
+                    <li>
+                        <a href="#descarte"> Descarte correto </a>
+                    </li>
+
+                    <!-- NOVO MENU DROPDOWN "MÍDIA" -->
+                    <li class="dropdown">
+                        <a href="#" class="drop-btn">Mídia <i class="fa-solid fa-chevron-down"
+                                style="font-size: 10px;"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="galeria.html">Galeria</a></li>
+                            <li><a href="midia.html">Multimídia</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#contato"> Contato </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="conteudo">
+        <section class="section about">
+            <div class="container" style="max-width: 1200px;">
+
+                <div class="section-heading" style="max-width: 100%; margin-bottom: 40px;">
+                    <span class="section-label"> Galeria Ambiental </span>
+                    <h2>Registros Visuais e Soluções Sustentáveis</h2>
+                    <p>
+                        Explore nossa galeria com registros visuais sobre o tratamento do lixo eletrônico.
+                    </p>
+                </div>
+
+                <!-- Grid da Galeria -->
+                <div class="gallery-grid">
+
+                    <!-- Imagem 1: Centro de Reciclagem Eletrônica -->
+                    <article class="gallery-card"
+                        onclick="openLightbox('images/centro-reciclagem.webp', 'Centro de Reciclagem Eletrônica', 'Instalação especializada onde os resíduos eletrônicos são recebidos, triados e processados de forma sustentável.', 'Gerado por Gemini IA')">
+                        <img src="images/centro-reciclagem.webp"
+                            alt="Centro de Reciclagem Eletrônica com profissionais triando componentes" loading="lazy">
+                        <div class="gallery-content">
+                            <h3>Centro de Reciclagem Eletrônica</h3>
+                            <p>Instalação especializada onde os resíduos eletrônicos são recebidos e triados de forma
+                                sustentável.</p>
+                            <div class="gallery-source"><i class="fa-solid fa-camera"></i> Fonte: Gerado por Gemini IA /
+                                Projeto EcoTech
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Imagem 2: Mineração Urbana (ATUALIZADA) -->
+                    <article class="gallery-card"
+                        onclick="openLightbox('images/mineracao-urbana.webp', 'Mineração Urbana', 'A recuperação de metais nobres presentes em placas eletrônicas reduz a necessidade de nova extração mineral na natureza.', 'Gerado por Gemini IA')">
+                        <img src="images/mineracao-urbana.webp"
+                            alt="Separando metais nobres e pinos de ouro de placas de circuito" loading="lazy">
+                        <div class="gallery-content">
+                            <h3>Mineração Urbana</h3>
+                            <p>A recuperação de metais nobres presentes em placas eletrônicas reduz a necessidade de
+                                nova extração mineral.</p>
+                            <div class="gallery-source"><i class="fa-solid fa-camera"></i> Fonte: Gerado por Gemini IA /
+                                Projeto EcoTech
+                            </div>
+                        </div>
+                    </article>
+
+
+                    <!-- Imagem 3: Ponto de Coleta na FATEC SCS (ATUALIZADA) -->
+                    <article class="gallery-card"
+                        onclick="openLightbox('images/ecoponto-fatec.webp', 'Ponto de Coleta na FATEC SCS', 'Ecoponto EcoTech instalado na FATEC São Caetano do Sul, facilitando o descarte correto para estudantes e comunidade local.', 'Gerado por Gemini IA / FATEC SCS')">
+                        <img src="images/ecoponto-fatec.webp"
+                            alt="Totem de coleta EcoTech na entrada da FATEC São Caetano do Sul, com alunos descartando eletrônico"
+                            loading="lazy">
+                        <div class="gallery-content">
+                            <h3>Ponto de Coleta na FATEC SCS</h3>
+                            <p>Ecoponto EcoTech instalado na faculdade, facilitando o descarte correto para estudantes.
+                            </p>
+                            <div class="gallery-source"><i class="fa-solid fa-camera"></i> Fonte: Gerado por Gemini IA /
+                                Projeto EcoTech
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Imagem 4: Educação Ambiental na Escola (ATUALIZADA) -->
+                    <article class="gallery-card"
+                        onclick="openLightbox('images/educacao-infantil.webp', 'Educação Ambiental na Escola', 'Crianças participam de oficina de criatividade e reaproveitamento de lixo eletrônico, aprendendo a importância da reciclagem desde cedo.', 'Gerado por Gemini IA / Projeto EcoTech')">
+                        <img src="images/educacao-infantil.webp"
+                            alt="Crianças em sala de aula criando arte com componentes eletrônicos e caixa de arrecadação."
+                            loading="lazy">
+                        <div class="gallery-content">
+                            <h3>Educação Ambiental na Escola</h3>
+                            <p>Oficina de criatividade ensina crianças sobre o descarte correto e reaproveitamento de
+                                lixo eletrônico.</p>
+                            <div class="gallery-source"><i class="fa-solid fa-camera"></i> Fonte: Gerado por Gemini IA /
+                                Projeto EcoTech</div>
+                        </div>
+                    </article>
+
+                    <!-- Imagem 5: Oficina de Recondicionamento e Doação (ATUALIZADA) -->
+                    <article class="gallery-card"
+                        onclick="openLightbox('images/oficina-doacao.webp', 'Oficina de Recondicionamento e Doação', 'Aparelhos eletrônicos antigos ou danificados são consertados por voluntários e devolvidos à sociedade através de programas de doação e inclusão digital.', 'Gerado por Gemini IA / Projeto EcoTech')">
+                        <img src="images/oficina-doacao.webp"
+                            alt="Oficina comunitária com voluntários recondicionando computadores para doação a famílias carentes."
+                            loading="lazy">
+                        <div class="gallery-content">
+                            <h3>Oficina de Recondicionamento e Doação</h3>
+                            <p>Aparelhos eletrônicos são consertados por voluntários e devolvidos à sociedade através de
+                                doação.</p>
+                            <div class="gallery-source"><i class="fa-solid fa-camera"></i> Fonte: Gerado por Gemini IA /
+                                Projeto EcoTech</div>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card"
+                        onclick="openLightbox('images/entrega-doacao.webp', 'Entrega e Inclusão Digital', 'O ciclo da sustentabilidade se completa com a entrega de equipamentos recondicionados a famílias e estudantes, promovendo a inclusão digital e a cidadania.', 'Gerado por Gemini IA / Projeto EcoTech')">
+                        <img src="images/entrega-doacao.webp"
+                            alt="Atendente negro EcoTech entrega um computador recondicionado para uma mãe branca e seu filho branco, sorrindo."
+                            loading="lazy">
+                        <div class="gallery-content">
+                            <h3>Entrega e Inclusão Digital</h3>
+                            <p>Famílias e estudantes recebem computadores recondicionados, promovendo a inclusão digital
+                                e cidadania.</p>
+                            <div class="gallery-source"><i class="fa-solid fa-camera"></i> Fonte: Gerado por Gemini IA /
+                                Projeto EcoTech</div>
+                        </div>
+                    </article>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Modal Lightbox (Popup Ampliado) -->
+        <div id="lightboxModal" class="lightbox-modal" onclick="closeLightbox(event)">
+            <div class="lightbox-content" onclick="event.stopPropagation()">
+                <button class="lightbox-close" onclick="closeLightboxDirect()">&times;</button>
+                <img id="lightboxImg" src="" alt="Imagem ampliada">
+                <div class="lightbox-body">
+                    <h3 id="lightboxTitle"></h3>
+                    <p id="lightboxDesc"></p>
+                    <div id="lightboxSource" class="gallery-source"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Botão flutuante do WhatsApp -->
+        <a href="https://wa.me/5511999999999" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
+            aria-label="Entre em contato com a EcoTech pelo WhatsApp" title="Fale conosco pelo WhatsApp">
+            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+        </a>
+    </main>
+
+    <!-- RODAPÉ IDÊNTICO À PÁGINA DE MÍDIA -->
+    <footer id="contato" class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="#inicio" class="logo">
+                    <span class="logo-icon" aria-hidden="true">♻</span>
+                    <span>Eco<span>Tech</span></span>
+                </a>
+
+                <p>Informação e conscientização para um futuro mais sustentável.</p>
+            </div>
+
+            <div class="footer-column">
+                <h2>Navegação</h2>
+
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="projetos.html">Projetos</a></li>
+                    <li><a href="impacto.html">Impacto</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h2>Projeto</h2>
+
+                <p>
+                    Projeto acadêmico desenvolvido para a disciplina de Desenvolvimento Web.
+                </p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p>© 2026 EcoTech. Projeto acadêmico.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script JavaScript simples para controlar o Zoom (Lightbox) -->
+    <script>
+        function openLightbox(src, title, desc, source) {
+            const modal = document.getElementById('lightboxModal');
+            document.getElementById('lightboxImg').src = src;
+            document.getElementById('lightboxTitle').innerText = title;
+            document.getElementById('lightboxDesc').innerText = desc;
+            document.getElementById('lightboxSource').innerHTML = '<i class="fa-solid fa-camera"></i> Fonte: ' + source;
+            modal.classList.add('active');
+        }
+
+        function closeLightbox(event) {
+            document.getElementById('lightboxModal').classList.remove('active');
+        }
+
+        function closeLightboxDirect() {
+            document.getElementById('lightboxModal').classList.remove('active');
+        }
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navigation = document.querySelector('.navigation');
+
+            if (menuToggle && navigation) {
+                menuToggle.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    navigation.classList.toggle('is-open');
+                    const isOpen = navigation.classList.contains('is-open');
+                    menuToggle.setAttribute('aria-expanded', isOpen);
+                });
+
+                // Fecha o menu se clicar fora dele no celular
+                document.addEventListener('click', function (event) {
+                    if (!navigation.contains(event.target) && !menuToggle.contains(event.target)) {
+                        navigation.classList.remove('is-open');
+                        menuToggle.setAttribute('aria-expanded', 'false');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
