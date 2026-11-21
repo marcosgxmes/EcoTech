@@ -1,23 +1,23 @@
 <!doctype html>
 <html lang="pt-BR">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
       content="Medidas de inclusão para PCD da EcoTech: acessibilidade digital, navegação por teclado, VLibras, transcrições e inclusão física nos pontos de coleta."
-    >
-    <meta name="author" content="EcoTech">
-    <link rel="icon" type="image/png" href="images/favicon.png">
+    />
+    <meta name="author" content="EcoTech" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
 
     <title>EcoTech - Acessibilidade e Inclusão para PCD</title>
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/acessibilidade.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/acessibilidade.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    >
+    />
   </head>
 
   <body>
@@ -353,5 +353,17 @@
     </footer>
 
     <script src="funcionalidades/acessibilidade.js"></script>
+    <!-- Início do código do VLibras -->
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget("https://vlibras.gov.br/app");
+    </script>
+    <!-- Fim do código do VLibras -->
   </body>
 </html>
