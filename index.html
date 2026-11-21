@@ -15,6 +15,7 @@
 
     <link rel="icon" type="image/png" href="images/favicon.png" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/acessibilidade.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -24,8 +25,7 @@
   </head>
 
   <body>
-    <!-- Link para facilitar a navegação por teclado -->
-    <a href="#conteudo" class="skip-link"> Pular para o conteúdo principal </a>
+    <a href="#conteudo" class="skip-link">Pular para o conteúdo principal</a>
 
     <!-- CABEÇALHO -->
     <header class="header">
@@ -55,35 +55,40 @@
         >
           <ul class="nav-list">
             <li>
-              <a href="#inicio" class="active"> Início </a>
+              <a href="#inicio" class="active" aria-current="page">Início</a>
             </li>
-
             <li>
-              <a href="#sobre"> Sobre </a>
+              <a href="#sobre">Sobre</a>
             </li>
-
             <li>
-              <a href="#impacto-ambiental"> Impacto </a>
+              <a href="#impacto-ambiental">Impacto</a>
             </li>
-
             <li>
-              <a href="#descarte"> Descarte correto </a>
+              <a href="#descarte">Descarte correto</a>
             </li>
-
-            <!-- NOVO MENU DROPDOWN "MÍDIA" -->
             <li class="dropdown">
-              <a href="#" class="drop-btn"
-                >Mídia
-                <i class="fa-solid fa-chevron-down" style="font-size: 10px"></i
-              ></a>
-              <ul class="dropdown-menu">
+              <a
+                href="#"
+                class="drop-btn"
+                role="button"
+                aria-haspopup="true"
+                aria-expanded="false"
+                aria-controls="submenu-midia"
+              >
+                Mídia
+                <i
+                  class="fa-solid fa-chevron-down"
+                  style="font-size: 10px"
+                  aria-hidden="true"
+                ></i>
+              </a>
+              <ul class="dropdown-menu" id="submenu-midia">
                 <li><a href="galeria.html">Galeria</a></li>
                 <li><a href="midia.html">Multimídia</a></li>
               </ul>
             </li>
-
             <li>
-              <a href="#contato"> Contato </a>
+              <a href="#contato">Contato</a>
             </li>
           </ul>
         </nav>
@@ -95,7 +100,7 @@
       <section id="inicio" class="hero">
         <div class="container hero-content">
           <div class="hero-text">
-            <span class="tag"> ♻ Sustentabilidade e impacto social </span>
+            <span class="tag">♻ Sustentabilidade e impacto social</span>
 
             <h1>
               Dê um novo destino para o seu
@@ -112,15 +117,14 @@
               <a href="#descarte" class="btn btn-primary">
                 Saiba como descartar
               </a>
-
-              <a href="#sobre" class="btn btn-secondary"> Conheça o projeto </a>
+              <a href="#sobre" class="btn btn-secondary">Conheça o projeto</a>
             </div>
           </div>
 
-          <div class="hero-card" aria-label="Informação sobre reciclagem">
+          <div class="hero-card" role="region" aria-labelledby="hero-card-title">
             <div class="recycle-icon" aria-hidden="true">♻</div>
 
-            <h2>Reciclar é transformar</h2>
+            <h2 id="hero-card-title">Reciclar é transformar</h2>
 
             <p>
               Pequenas atitudes podem ajudar a reduzir o impacto ambiental
@@ -129,7 +133,7 @@
 
             <div class="hero-line"></div>
 
-            <span> Faça parte dessa mudança. </span>
+            <span>Faça parte dessa mudança.</span>
           </div>
         </div>
       </section>
@@ -138,7 +142,7 @@
       <section id="sobre" class="section about">
         <div class="container">
           <div class="section-heading">
-            <span class="section-label"> Sobre o projeto </span>
+            <span class="section-label">Sobre o projeto</span>
 
             <h2>Tecnologia também pode cuidar do planeta</h2>
 
@@ -152,9 +156,7 @@
           <div class="about-grid">
             <article class="info-card">
               <div class="card-icon" aria-hidden="true">🌱</div>
-
               <h3>Sustentabilidade</h3>
-
               <p>
                 Incentivar práticas responsáveis para reduzir os impactos
                 ambientais provocados pelo descarte inadequado de equipamentos
@@ -164,9 +166,7 @@
 
             <article class="info-card">
               <div class="card-icon" aria-hidden="true">🔄</div>
-
               <h3>Reutilização</h3>
-
               <p>
                 Equipamentos que ainda possuem utilidade podem ser
                 reaproveitados, prolongando sua vida útil e reduzindo o
@@ -176,9 +176,7 @@
 
             <article class="info-card">
               <div class="card-icon" aria-hidden="true">🌎</div>
-
               <h3>Impacto social</h3>
-
               <p>
                 Promover informação e conscientização para incentivar atitudes
                 que beneficiem a sociedade e o meio ambiente.
@@ -188,7 +186,7 @@
         </div>
       </section>
 
-      <!--  IMPACTO REAL DO LIXO ELETRÔNICO  -->
+      <!-- IMPACTO REAL DO LIXO ELETRÔNICO -->
       <section
         id="impacto-ambiental"
         class="section ecotech-impact-gallery"
@@ -261,10 +259,10 @@
       </section>
 
       <!-- IMPACTO -->
-      <section id="descarte" class="section impact">
+      <section id="importancia" class="section impact">
         <div class="container impact-content">
           <div class="impact-text">
-            <span class="section-label"> Por que isso importa? </span>
+            <span class="section-label">Por que isso importa?</span>
 
             <h2>O descarte incorreto gera consequências</h2>
 
@@ -287,11 +285,9 @@
 
           <div class="impact-list">
             <article class="impact-item">
-              <span class="impact-number"> 01 </span>
-
+              <span class="impact-number">01</span>
               <div>
                 <h3>Redução de resíduos</h3>
-
                 <p>
                   Evite que equipamentos sejam descartados de maneira
                   inadequada.
@@ -300,11 +296,9 @@
             </article>
 
             <article class="impact-item">
-              <span class="impact-number"> 02 </span>
-
+              <span class="impact-number">02</span>
               <div>
                 <h3>Reaproveitamento</h3>
-
                 <p>
                   Materiais e equipamentos podem encontrar novas possibilidades
                   de utilização.
@@ -313,11 +307,9 @@
             </article>
 
             <article class="impact-item">
-              <span class="impact-number"> 03 </span>
-
+              <span class="impact-number">03</span>
               <div>
                 <h3>Consciência ambiental</h3>
-
                 <p>
                   Informação é uma ferramenta importante para transformar
                   hábitos.
@@ -332,7 +324,7 @@
       <section id="descarte" class="section disposal">
         <div class="container">
           <div class="section-heading center">
-            <span class="section-label"> Descarte correto </span>
+            <span class="section-label">Descarte correto</span>
 
             <h2>Antes de jogar fora, pense no destino</h2>
 
@@ -344,30 +336,24 @@
 
           <div class="steps">
             <article class="step">
-              <span class="step-number"> 01 </span>
-
+              <span class="step-number">01</span>
               <h3>Separe</h3>
-
               <p>
                 Separe equipamentos eletrônicos de outros tipos de resíduos.
               </p>
             </article>
 
             <article class="step">
-              <span class="step-number"> 02 </span>
-
+              <span class="step-number">02</span>
               <h3>Verifique</h3>
-
               <p>
                 Confira se o equipamento ainda pode ser reutilizado ou doado.
               </p>
             </article>
 
             <article class="step">
-              <span class="step-number"> 03 </span>
-
+              <span class="step-number">03</span>
               <h3>Encaminhe</h3>
-
               <p>
                 Procure pontos de coleta e locais apropriados para receber
                 eletrônicos.
@@ -375,10 +361,8 @@
             </article>
 
             <article class="step">
-              <span class="step-number"> 04 </span>
-
+              <span class="step-number">04</span>
               <h3>Conscientize</h3>
-
               <p>
                 Compartilhe informações e incentive outras pessoas a fazerem o
                 descarte correto.
@@ -392,12 +376,11 @@
       <section class="cta">
         <div class="container cta-content">
           <div>
-            <span class="section-label"> Faça parte da mudança </span>
-
+            <span class="section-label">Faça parte da mudança</span>
             <h2>Um futuro sustentável começa com pequenas atitudes.</h2>
           </div>
 
-          <a href="#contato" class="btn btn-light"> Quero saber mais </a>
+          <a href="#contato" class="btn btn-light">Quero saber mais</a>
         </div>
       </section>
 
@@ -407,7 +390,7 @@
         class="whatsapp-float"
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Entre em contato com a EcoTech pelo WhatsApp"
+        aria-label="Entre em contato com a EcoTech pelo WhatsApp (abre em nova aba)"
         title="Fale conosco pelo WhatsApp"
       >
         <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
@@ -428,18 +411,18 @@
 
         <div class="footer-column">
           <h2>Navegação</h2>
-
           <ul>
-            <li><a href="index.html">Início</a></li>
-            <li><a href="sobre.html">Sobre</a></li>
-            <li><a href="projetos.html">Projetos</a></li>
-            <li><a href="impacto.html">Impacto</a></li>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#impacto-ambiental">Impacto</a></li>
+            <li><a href="#descarte">Descarte correto</a></li>
+            <li><a href="galeria.html">Galeria</a></li>
+            <li><a href="midia.html">Multimídia</a></li>
           </ul>
         </div>
 
         <div class="footer-column">
           <h2>Projeto</h2>
-
           <p>
             Projeto acadêmico desenvolvido para a disciplina de Desenvolvimento
             Web.
@@ -454,6 +437,18 @@
       </div>
     </footer>
 
-    <script src="/funcionalidades/index.js"></script>
+    <script src="funcionalidades/acessibilidade.js"></script>
+
+    <!-- VLibras -->
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget("https://vlibras.gov.br/app");
+    </script>
   </body>
 </html>

@@ -1,0 +1,94 @@
+/* EcoTech - ajustes de acessibilidade compartilhados pelas páginas */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Foco de teclado sempre visível (anel duplo para contraste em fundos claros e escuros) */
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible,
+audio:focus-visible,
+video:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid #166534;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 2px #ffffff;
+}
+
+.nav-list a:focus-visible {
+  color: var(--white);
+}
+
+.nav-list a:focus-visible::after {
+  width: 100%;
+}
+
+.nav-list .dropdown-menu li a:focus-visible {
+  background-color: #f3f4f6;
+}
+
+/* =========================================
+   CONTRASTE (WCAG AA)
+========================================= */
+
+:root {
+  --gray: #55635c;
+}
+
+.section-label {
+  color: #0f6b42;
+}
+
+.tag {
+  color: #3ccf86;
+}
+
+.impact-number,
+.step-number {
+  color: #0f6b42;
+}
+
+.text-link {
+  color: #0f6b42;
+}
+
+.skip-link {
+  background-color: var(--dark-blue);
+  color: var(--white);
+}
+
+.whatsapp-float {
+  background-color: #0e7c66;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .gallery-card:hover,
+  .info-card:hover,
+  .ecotech-impact-card:hover,
+  .btn:hover,
+  .whatsapp-float:hover {
+    transform: none !important;
+  }
+}
