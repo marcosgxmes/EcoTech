@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Fale com a EcoTech, conheça a equipe e envie uma mensagem sobre sustentabilidade e reciclagem eletrônica." />
+  <meta name="author" content="EcoTech" />
+  <meta name="theme-color" content="#082b3a" />
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <title>Contato e equipe | EcoTech</title>
+  <style>
+    .page-hero { position: relative; overflow: hidden; color: var(--white); background: radial-gradient(circle at 83% 38%,rgba(32,178,107,.2),transparent 24%),linear-gradient(135deg,var(--dark-blue),#0a3445); }
+    .page-hero-inner { position: relative; z-index: 1; padding-block: clamp(62px,8vw,95px); }
+    .page-kicker { display: inline-block; margin-bottom: 11px; color: var(--green); font-size: .8rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    .page-hero h1 { margin: 0 0 15px; font-size: clamp(2.7rem,6vw,4.5rem); line-height: 1.05; letter-spacing: -2px; }
+    .page-hero h1 strong { color: var(--green); }
+    .page-hero p { max-width: 650px; margin: 0 0 20px; color: #c9d9d4; font-size: 1.05rem; }
+    .page-hero a { color: #76e1a9; font-weight: 800; }
+    .hero-mark { position: absolute; top: 50%; right: max(8%,calc((100% - var(--container))/2)); display: grid; width: 155px; height: 155px; place-items: center; transform: translateY(-50%); border: 1px solid rgba(32,178,107,.3); border-radius: 50%; background: radial-gradient(circle,rgba(32,178,107,.15),transparent 68%); color: var(--green); font-size: 5rem; }
+    .hero-mark::before { position: absolute; inset: 13px; border: 1px dashed rgba(32,178,107,.4); border-radius: inherit; content: ''; }
+    .contact-section { background: var(--light); }
+    .contact-layout { display: grid; grid-template-columns: minmax(250px,.78fr) minmax(0,1.22fr); align-items: start; gap: clamp(30px,6vw,72px); }
+    .contact-aside { padding-top: 8px; }
+    .contact-aside h2 { max-width: 390px; margin: 0 0 15px; color: var(--dark-blue); font-size: clamp(1.8rem,3.4vw,2.55rem); line-height: 1.15; }
+    .contact-copy { margin-bottom: 24px; color: var(--gray); }
+    .contact-details { display: grid; gap: 16px; }
+    .contact-detail { display: flex; align-items: center; gap: 13px; color: var(--dark-blue); }
+    .contact-icon { display: grid; width: 42px; height: 42px; flex: 0 0 42px; place-items: center; border: 1px solid rgba(32,178,107,.25); border-radius: 12px; background: var(--green-light); color: var(--green-dark); font-size: 1.1rem; font-weight: 800; }
+    .contact-detail div { display: grid; }
+    .contact-label { color: var(--gray); font-size: .72rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+    .contact-detail a:hover { color: var(--green-dark); text-decoration: underline; }
+    .contact-note { margin: 24px 0 0; padding: 14px 16px; border-left: 3px solid var(--green); border-radius: 0 10px 10px 0; background: #eaf5ef; color: #42594e; }
+    .form-panel { padding: clamp(22px,4vw,38px); border: 1px solid var(--border); border-radius: 15px; background: var(--white); box-shadow: 0 18px 42px rgba(8,43,58,.08); }
+    .form-heading { margin-bottom: 21px; }
+    .form-heading h2 { margin: 0 0 7px; color: var(--dark-blue); font-size: 1.8rem; }
+    .form-heading p { margin: 0; color: var(--gray); font-size: .9rem; }
+    .required-mark { color: var(--green-dark); font-weight: 800; }
+    .form-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 14px 15px; }
+    .form-field { min-width: 0; }
+    .field-full { grid-column: 1 / -1; }
+    .form-field > label { display: inline-block; margin-bottom: 6px; color: var(--dark-blue); font-size: .88rem; font-weight: 700; }
+    .form-field input:not([type="checkbox"]),.form-field select,.form-field textarea { display: block; width: 100%; min-height: 44px; padding: 10px 12px; border: 1px solid #cbd9d2; border-radius: 8px; background: #fbfdfc; color: #17251f; font: inherit; }
+    .form-field input:focus,.form-field select:focus,.form-field textarea:focus { outline: 3px solid rgba(32,178,107,.2); border-color: var(--green-dark); }
+    .form-field textarea { min-height: 116px; resize: vertical; }
+    .field-hint { display: block; margin-top: 4px; color: var(--gray); font-size: .78rem; }
+    .consent-field { display: grid; grid-template-columns: 18px 1fr; align-items: start; gap: 8px; }
+    .consent-field > input { width: 17px; height: 17px; margin: 3px 0 0; accent-color: var(--green-dark); }
+    .consent-field > label { margin: 0; color: var(--gray); font-weight: 500; }
+    .privacy-note { margin: 10px 0 0; color: var(--gray); font-size: .78rem; }
+    .form-status { margin: 15px 0 0; padding: 12px 14px; border-radius: 8px; background: #fff8dd; color: #665416; }
+    .form-status[hidden] { display: none; }
+    .team-section { background: var(--white); }
+    .team-heading { display: flex; align-items: end; justify-content: space-between; gap: 28px; margin-bottom: 25px; }
+    .team-heading h2 { margin: 0; color: var(--dark-blue); font-size: clamp(1.9rem,4vw,2.8rem); }
+    .team-heading > p { max-width: 390px; margin: 0; color: var(--gray); }
+    .team-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 14px; }
+    .team-card { display: flex; align-items: center; gap: 13px; min-height: 88px; padding: 14px; border: 1px solid var(--border); border-radius: 12px; background: #fbfdfc; }
+    .team-avatar { display: grid; width: 50px; height: 50px; flex: 0 0 50px; place-items: center; border-radius: 50%; color: var(--dark-blue); font-weight: 800; }
+    .avatar-green { background: linear-gradient(135deg,#a7e9c2,#39c87d); }
+    .avatar-blue { background: linear-gradient(135deg,#b6e3ec,#55b9ce); }
+    .avatar-lime { background: linear-gradient(135deg,#d8efaa,#95ce5c); }
+    .team-card h3 { margin: 0 0 2px; color: var(--dark-blue); font-size: 1rem; }
+    .team-card p { margin: 0; color: var(--gray); font-size: .82rem; }
+    .team-disclaimer { margin: 12px 0 0; color: var(--gray); font-size: .78rem; }
+    .footer-links-list { display: grid; gap: 8px; }
+    .footer-links-list a:hover { color: var(--green); }
+    @media (max-width: 900px) { .contact-layout { grid-template-columns: 1fr; } .contact-aside { max-width: 700px; } .team-heading { align-items: start; flex-direction: column; gap: 10px; } }
+    @media (max-width: 600px) { .hero-mark { display: none; } .page-hero-inner { padding-block: 65px; } .contact-section,.team-section { padding-block: 62px; } .form-grid { grid-template-columns: 1fr; } .field-full { grid-column: auto; } .team-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <a href="#conteudo" class="skip-link">Pular para o conteúdo principal</a>
+  <header class="header">
+    <div class="container header-content">
+      <a href="index.html" class="logo" aria-label="EcoTech - Página inicial"><span class="logo-icon" aria-hidden="true">♻</span><span>Eco<span>Tech</span></span></a>
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal"><span></span><span></span><span></span></button>
+      <nav id="menu-principal" class="navigation" aria-label="Navegação principal">
+        <ul class="nav-list">
+          <li><a href="index.html#inicio">Início</a></li>
+          <li><a href="index.html#sobre">Sobre</a></li>
+          <li><a href="index.html#impacto-ambiental">Impacto</a></li>
+          <li><a href="galeria.html">Galeria</a></li>
+          <li><a href="midia.html">Multimídia</a></li>
+          <li><a href="noticias.html">Notícias</a></li>
+          <li><a href="contato.html" class="active" aria-current="page">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="page-hero" aria-labelledby="page-title"><div class="container page-hero-inner"><span class="page-kicker">Fale com a EcoTech</span><h1 id="page-title">Vamos conversar<strong>?</strong></h1><p>Tem uma dúvida, uma ideia ou quer fazer parceria? Envie uma mensagem. A equipe EcoTech está pronta para ouvir.</p><a href="#formulario">Envie sua mensagem <span aria-hidden="true">↓</span></a></div><div class="hero-mark" aria-hidden="true">♻</div></section>
+
+    <section class="section contact-section" aria-labelledby="contact-title">
+      <div class="container contact-layout">
+        <aside class="contact-aside">
+          <span class="page-kicker">Estamos por aqui</span><h2 id="contact-title">Um contato pode iniciar uma boa mudança.</h2>
+          <p class="contact-copy">Use os canais abaixo ou conte um pouco mais pelo formulário. Os dados desta página são fictícios e servem apenas para o projeto acadêmico.</p>
+          <div class="contact-details">
+            <div class="contact-detail"><span class="contact-icon" aria-hidden="true">@</span><div><span class="contact-label">E-mail</span><a href="mailto:contato@ecotech.org.br">contato@ecotech.org.br</a></div></div>
+            <div class="contact-detail"><span class="contact-icon" aria-hidden="true">↗</span><div><span class="contact-label">Telefone</span><a href="tel:+551134567890">(11) 3456-7890</a></div></div>
+            <div class="contact-detail"><span class="contact-icon" aria-hidden="true">⌖</span><div><span class="contact-label">Localização</span><span>São Paulo, SP</span></div></div>
+            <div class="contact-detail"><span class="contact-icon" aria-hidden="true">◷</span><div><span class="contact-label">Atendimento</span><span>Segunda a sexta, das 9h às 17h</span></div></div>
+          </div>
+          <p class="contact-note">Seu próximo eletrônico pode ter um destino melhor. Pergunte à equipe sobre descarte e pontos de coleta.</p>
+        </aside>
+
+        <section class="form-panel" id="formulario" aria-labelledby="form-title">
+          <div class="form-heading"><span class="page-kicker">Mande sua mensagem</span><h2 id="form-title">Como podemos ajudar?</h2><p>Os campos com <span class="required-mark" aria-hidden="true">*</span> são obrigatórios.</p></div>
+          <form id="contact-form">
+            <div class="form-grid">
+              <div class="form-field field-full"><label for="name">Nome completo <span class="required-mark" aria-hidden="true">*</span></label><input id="name" name="name" type="text" autocomplete="name" minlength="2" maxlength="80" pattern="[A-Za-zÀ-ÖØ-öø-ÿÇç' .-]{2,80}" title="Use de 2 a 80 letras e pontuação comum." required /></div>
+              <div class="form-field"><label for="email">E-mail <span class="required-mark" aria-hidden="true">*</span></label><input id="email" name="email" type="email" autocomplete="email" maxlength="254" placeholder="voce@exemplo.com" required /></div>
+              <div class="form-field"><label for="phone">Telefone com DDD <span class="required-mark" aria-hidden="true">*</span></label><input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" pattern="\+?[0-9() .-]{9,19}" title="Informe o telefone com DDD." placeholder="(11) 99999-0000" required /></div>
+              <div class="form-field"><label for="contactDate">Data preferida para contato <span class="required-mark" aria-hidden="true">*</span></label><input id="contactDate" name="contactDate" type="date" required /></div>
+              <div class="form-field"><label for="equipmentCount">Quantidade de equipamentos <span class="required-mark" aria-hidden="true">*</span></label><input id="equipmentCount" name="equipmentCount" type="number" min="1" max="99" step="1" inputmode="numeric" required /></div>
+              <div class="form-field field-full"><label for="subject">Assunto <span class="required-mark" aria-hidden="true">*</span></label><select id="subject" name="subject" required><option value="">Selecione um assunto</option><option value="Descarte eletrônico">Descarte eletrônico</option><option value="Parcerias">Parcerias</option><option value="Dúvida sobre o projeto">Dúvida sobre o projeto</option><option value="Outro">Outro</option></select></div>
+              <div class="form-field field-full"><label for="message">Mensagem <span class="required-mark" aria-hidden="true">*</span></label><textarea id="message" name="message" rows="5" minlength="20" maxlength="2000" placeholder="Conte como podemos ajudar (mínimo de 20 caracteres)." required></textarea><span class="field-hint">Até 2.000 caracteres.</span></div>
+              <div class="form-field field-full consent-field"><input id="consent" name="consent" type="checkbox" required /><label for="consent">Autorizo o uso dos dados informados para que a equipe EcoTech responda à minha mensagem. <span class="required-mark" aria-hidden="true">*</span></label></div>
+              <div class="form-field field-full"><button class="btn btn-primary" type="submit">Validar mensagem <span aria-hidden="true">→</span></button><p class="privacy-note">Demonstração acadêmica: a validação ocorre no navegador, mas este formulário ainda não envia nem armazena mensagens.</p></div>
+            </div>
+            <p class="form-status" id="form-status" role="status" aria-live="polite" tabindex="-1" hidden></p>
+          </form>
+        </section>
+      </div>
+    </section>
+
+    <section class="section team-section" aria-labelledby="team-title"><div class="container"><div class="team-heading"><div><span class="page-kicker">Gente que acredita na mudança</span><h2 id="team-title">Quem faz a EcoTech.</h2></div><p>Uma equipe dedicada a aproximar tecnologia, informação e cuidado com o planeta.</p></div><div class="team-grid"><article class="team-card"><span class="team-avatar avatar-green" aria-hidden="true">AM</span><div><h3>Ana Martins</h3><p>Educação ambiental</p></div></article><article class="team-card"><span class="team-avatar avatar-blue" aria-hidden="true">LF</span><div><h3>Lucas Ferreira</h3><p>Reciclagem e tecnologia</p></div></article><article class="team-card"><span class="team-avatar avatar-lime" aria-hidden="true">MC</span><div><h3>Marina Costa</h3><p>Comunicação</p></div></article></div><p class="team-disclaimer">Nomes, funções e meios de contato fictícios, criados para fins acadêmicos.</p></div></section>
+  </main>
+
+  <footer class="footer"><div class="container footer-content"><div class="footer-brand"><a href="index.html" class="logo"><span class="logo-icon" aria-hidden="true">♻</span><span>Eco<span>Tech</span></span></a><p>Informação e conscientização para um futuro mais sustentável.</p></div><div class="footer-column"><h2>Navegação</h2><ul class="footer-links-list"><li><a href="index.html">Início</a></li><li><a href="galeria.html">Galeria</a></li><li><a href="midia.html">Multimídia</a></li><li><a href="noticias.html">Notícias</a></li><li><a href="contato.html" aria-current="page">Contato</a></li></ul></div><div class="footer-column"><h2>Projeto</h2><p>Projeto acadêmico. Dados de contato e equipe desta página são fictícios.</p></div></div><div class="footer-bottom"><div class="container"><p>© 2026 EcoTech. Projeto acadêmico.</p></div></div></footer>
+  <script src="funcionalidades/index.js"></script>
+  <script>
+    const contactForm = document.getElementById('contact-form');
+    const contactDate = document.getElementById('contactDate');
+    const statusMessage = document.getElementById('form-status');
+    const now = new Date();
+    contactDate.min = new Date(now.getTime() - now.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
+    contactForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      statusMessage.textContent = 'Os campos foram validados pelo navegador. O formulário é demonstrativo e ainda não está conectado a um serviço de envio.';
+      statusMessage.hidden = false;
+      statusMessage.focus();
+    });
+  </script>
+</body>
+</html>
