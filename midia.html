@@ -49,11 +49,24 @@
           aria-label="Navegação principal"
         >
           <ul class="nav-list">
-            <li><a href="index.html">Início</a></li>
-            <li><a href="index.html#sobre">Sobre</a></li>
-            <li><a href="index.html#impacto-ambiental">Impacto</a></li>
-            <li><a href="index.html#descarte">Descarte correto</a></li>
-            <li><a href="acessibilidade.html">Acessibilidade</a></li>
+            <li>
+              <a href="index.html">Início</a>
+            </li>
+            <li>
+              <a href="index.html#sobre">Sobre</a>
+            </li>
+            <li class="dropdown">
+              <a href="index.html#impacto-ambiental" class="drop-btn"
+                >Impacto
+                <i
+                  class="fa-solid fa-chevron-down chevron-icon"
+                  aria-hidden="true"
+                ></i>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="index.html#descarte">Descarte correto</a></li>
+              </ul>
+            </li>
             <li class="dropdown">
               <a
                 href="#"
@@ -72,11 +85,21 @@
               <ul class="dropdown-menu" id="submenu-midia">
                 <li><a href="galeria.html">Galeria</a></li>
                 <li>
-                  <a href="midia.html" aria-current="page">Multimídia</a>
+                  <a href="midia.html" class="active" aria-current="page"
+                    >Multimídia</a
+                  >
                 </li>
               </ul>
             </li>
-            <li><a href="#contato">Contato</a></li>
+            <li>
+              <a href="acessibilidade.html">Acessibilidade</a>
+            </li>
+            <li>
+              <a href="index.html#orcamento_hospedagem">Hospedagem</a>
+            </li>
+            <li>
+              <a href="index.html#contato">Contato</a>
+            </li>
           </ul>
         </nav>
       </div>
@@ -263,16 +286,16 @@
     </footer>
 
     <script src="funcionalidades/acessibilidade.js"></script>
-        <!-- Início do código do VLibras -->
+    <!-- Início do código do VLibras -->
     <div vw class="enabled">
-        <div vw-access-button class="active"></div>
-        <div vw-plugin-wrapper>
-            <div class="vw-plugin-top-wrapper"></div>
-        </div>
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
     </div>
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <script>
-        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      new window.VLibras.Widget("https://vlibras.gov.br/app");
     </script>
     <!-- Fim do código do VLibras -->
   </body>

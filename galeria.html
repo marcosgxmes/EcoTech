@@ -1,23 +1,23 @@
 <!doctype html>
 <html lang="pt-BR">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta
       name="description"
-      content="Galeria ambiental da EcoTech com registros visuais sobre sustentabilidade e descarte correto."
-    />
-    <meta name="author" content="EcoTech" />
-    <link rel="icon" type="image/png" href="images/favicon.png" />
+      content="Medidas de inclusão para PCD da EcoTech: acessibilidade digital, navegação por teclado, VLibras, transcrições e inclusão física nos pontos de coleta."
+    >
+    <meta name="author" content="EcoTech">
+    <link rel="icon" type="image/png" href="images/favicon.png">
 
-    <title>EcoTech - Galeria Ambiental</title>
+    <title>EcoTech - Acessibilidade e Inclusão para PCD</title>
 
-    <link rel="stylesheet" href="css/stylemidia.css" />
-    <link rel="stylesheet" href="css/acessibilidade.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/acessibilidade.css">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    />
+    >
   </head>
 
   <body>
@@ -33,6 +33,7 @@
 
         <button
           class="menu-toggle"
+          id="menu-toggle"
           type="button"
           aria-label="Abrir menu"
           aria-expanded="false"
@@ -53,7 +54,11 @@
             <li><a href="index.html#sobre">Sobre</a></li>
             <li><a href="index.html#impacto-ambiental">Impacto</a></li>
             <li><a href="index.html#descarte">Descarte correto</a></li>
-            <li><a href="acessibilidade.html">Acessibilidade</a></li>
+            <li>
+              <a href="acessibilidade.html" class="active" aria-current="page">
+                Acessibilidade
+              </a>
+            </li>
             <li class="dropdown">
               <a
                 href="#"
@@ -65,12 +70,13 @@
               >
                 Mídia
                 <i
-                  class="fa-solid fa-chevron-down chevron-icon"
+                  class="fa-solid fa-chevron-down"
+                  style="font-size: 10px"
                   aria-hidden="true"
                 ></i>
               </a>
               <ul class="dropdown-menu" id="submenu-midia">
-                <li><a href="galeria.html" aria-current="page">Galeria</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
                 <li><a href="midia.html">Multimídia</a></li>
               </ul>
             </li>
@@ -81,250 +87,232 @@
     </header>
 
     <main id="conteudo">
-      <h1 class="sr-only">EcoTech – Galeria Ambiental</h1>
-      <section class="section about">
-        <div class="container media-container">
-          <div class="section-heading media-heading">
-            <span class="section-label">Galeria Ambiental</span>
-            <h2>Registros Visuais e Soluções Sustentáveis</h2>
+      <!-- HERO DE ACESSIBILIDADE -->
+      <section class="hero">
+        <div class="container hero-content">
+          <div class="hero-text">
+            <span class="tag">♿ Medidas de inclusão para PCD</span>
+
+            <h1>
+              Sustentabilidade e informação
+              <strong>acessíveis a todas as pessoas.</strong>
+            </h1>
+
             <p>
-              Explore nossa galeria com registros visuais sobre o tratamento do
-              lixo eletrônico.
+              Na EcoTech, a inclusão de pessoas com deficiência (PCD) faz parte
+              do projeto desde a concepção: unimos boas práticas de
+              acessibilidade digital na web e diretrizes de inclusão nos pontos
+              de coleta e recondicionamento de eletrônicos.
+            </p>
+
+            <div class="hero-buttons">
+              <a href="#recursos-digitais" class="btn btn-primary">
+                Recursos digitais do site
+              </a>
+              <a href="#inclusao-coleta" class="btn btn-secondary">
+                Inclusão nos pontos de coleta
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="hero-card"
+            role="region"
+            aria-labelledby="acessibilidade-resumo-titulo"
+          >
+            <div class="recycle-icon" aria-hidden="true">♿</div>
+
+            <h2 id="acessibilidade-resumo-titulo">Compromisso com a inclusão</h2>
+
+            <p>
+              Estrutura HTML5 semântica, contraste verificado, navegação por
+              teclado com foco visível, suporte a leitores de tela, VLibras e
+              transcrição multimídia.
+            </p>
+
+            <div class="hero-line"></div>
+
+            <span>Diretrizes alinhadas às boas práticas da WCAG.</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- RECURSOS DE ACESSIBILIDADE DIGITAL -->
+      <section id="recursos-digitais" class="section about">
+        <div class="container">
+          <div class="section-heading">
+            <span class="section-label">Acessibilidade digital</span>
+            <h2>Recursos aplicados na navegação e no conteúdo</h2>
+            <p>
+              Cada recurso foi pensado para reduzir barreiras visuais,
+              motoras, auditivas e cognitivas durante a leitura e a interação
+              no site.
             </p>
           </div>
 
-          <div class="gallery-grid">
-            <article
-              class="gallery-card"
-              data-src="images/centro-reciclagem.webp"
-              data-title="Centro de Reciclagem Eletrônica"
-              data-desc="Instalação especializada onde os resíduos eletrônicos são recebidos, triados e processados de forma sustentável."
-              data-source="Gerado por Gemini IA / Projeto EcoTech"
-            >
-              <img
-                src="images/centro-reciclagem.webp"
-                alt="Centro de Reciclagem Eletrônica com profissionais triando componentes"
-                loading="lazy"
-              />
-              <div class="gallery-content">
-                <h3>
-                  <button
-                    type="button"
-                    class="gallery-trigger"
-                    aria-haspopup="dialog"
-                  >
-                    Centro de Reciclagem Eletrônica
-                    <span class="sr-only">(ampliar imagem)</span>
-                  </button>
-                </h3>
+          <div class="about-grid">
+            <article class="info-card">
+              <div class="card-icon" aria-hidden="true">⌨️</div>
+              <h3>Navegação por teclado e leitores de tela</h3>
+              <p>
+                Uso de <code>skip-link</code> para saltar direto ao conteúdo
+                principal, landmarks semânticos (<code>header</code>,
+                <code>nav</code>, <code>main</code>, <code>section</code>,
+                <code>article</code>, <code>footer</code>), atributos ARIA e
+                <em>focus trap</em> no modal da galeria.
+              </p>
+            </article>
+
+            <article class="info-card">
+              <div class="card-icon" aria-hidden="true">🎨</div>
+              <h3>Contraste, tipografia e movimento reduzido</h3>
+              <p>
+                Combinações de cores ajustadas para legibilidade, foco de
+                teclado de alto contraste e respeito à preferência do sistema
+                (<code>prefers-reduced-motion</code>) para evitar animações
+                indesejadas.
+              </p>
+            </article>
+
+            <article class="info-card">
+              <div class="card-icon" aria-hidden="true">🤟</div>
+              <h3>Libras, legendas e transcrição</h3>
+              <p>
+                Integração com o widget VLibras para tradução em Libras,
+                textos alternativos (<code>alt</code>) descritivos nas imagens,
+                faixa de legendas (<code>.vtt</code>) e transcrição textual do
+                podcast.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- INCLUSÃO FÍSICA E SOCIAL (ECOPONTOS E DOAÇÃO) -->
+      <section id="inclusao-coleta" class="section impact">
+        <div class="container impact-content">
+          <div class="impact-text">
+            <span class="section-label">Inclusão física e social</span>
+            <h2>Descarte e recondicionamento pensados para todos</h2>
+            <p>
+              A inclusão não termina na tela do computador ou do celular. O
+              descarte correto de resíduos eletrônicos e a entrega de
+              equipamentos recondicionados também exigem espaços acessíveis e
+              atendimento acolhedor.
+            </p>
+            <p>
+              Confira as medidas recomendadas para pontos de coleta, oficinas e
+              ações comunitárias da iniciativa.
+            </p>
+            <a href="galeria.html" class="text-link">
+              Ver registros visuais na galeria
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+
+          <div class="impact-list">
+            <article class="impact-item">
+              <span class="impact-number">01</span>
+              <div>
+                <h3>Acesso físico e altura de descarte</h3>
                 <p>
-                  Instalação especializada onde os resíduos eletrônicos são
-                  recebidos e triados de forma sustentável.
+                  Rotas livres de obstáculos, rampas ou piso regular e
+                  aberturas de coletores em altura alcançável por pessoas em
+                  cadeira de rodas ou com mobilidade reduzida.
                 </p>
-                <div class="gallery-source">
-                  <i class="fa-solid fa-camera" aria-hidden="true"></i> Fonte:
-                  Gerado por Gemini IA / Projeto EcoTech
-                </div>
               </div>
             </article>
 
-            <article
-              class="gallery-card"
-              data-src="images/mineracao-urbana.webp"
-              data-title="Mineração Urbana"
-              data-desc="A recuperação de metais nobres presentes em placas eletrônicas reduz a necessidade de nova extração mineral na natureza."
-              data-source="Gerado por Gemini IA / Projeto EcoTech"
-            >
-              <img
-                src="images/mineracao-urbana.webp"
-                alt="Separando metais nobres e pinos de ouro de placas de circuito"
-                loading="lazy"
-              />
-              <div class="gallery-content">
-                <h3>
-                  <button
-                    type="button"
-                    class="gallery-trigger"
-                    aria-haspopup="dialog"
-                  >
-                    Mineração Urbana
-                    <span class="sr-only">(ampliar imagem)</span>
-                  </button>
-                </h3>
+            <article class="impact-item">
+              <span class="impact-number">02</span>
+              <div>
+                <h3>Sinalização visual e tátil</h3>
                 <p>
-                  A recuperação de metais nobres presentes em placas eletrônicas
-                  reduz a necessidade de nova extração mineral.
+                  Placas com fontes legíveis, ícones claros e sinalização tátil
+                  ou em Braille para facilitar a identificação dos tipos de
+                  resíduos e orientações de segurança.
                 </p>
-                <div class="gallery-source">
-                  <i class="fa-solid fa-camera" aria-hidden="true"></i> Fonte:
-                  Gerado por Gemini IA / Projeto EcoTech
-                </div>
               </div>
             </article>
 
-            <article
-              class="gallery-card"
-              data-src="images/ecoponto-fatec.webp"
-              data-title="Ponto de Coleta na FATEC SCS"
-              data-desc="Ecoponto EcoTech instalado na FATEC São Caetano do Sul, facilitando o descarte correto para estudantes e comunidade local."
-              data-source="Gerado por Gemini IA / FATEC SCS"
-            >
-              <img
-                src="images/ecoponto-fatec.webp"
-                alt="Totem de coleta EcoTech na entrada da FATEC São Caetano do Sul, com alunos descartando eletrônico"
-                loading="lazy"
-              />
-              <div class="gallery-content">
-                <h3>
-                  <button
-                    type="button"
-                    class="gallery-trigger"
-                    aria-haspopup="dialog"
-                  >
-                    Ponto de Coleta na FATEC SCS
-                    <span class="sr-only">(ampliar imagem)</span>
-                  </button>
-                </h3>
+            <article class="impact-item">
+              <span class="impact-number">03</span>
+              <div>
+                <h3>Inclusão digital por recondicionamento</h3>
                 <p>
-                  Ecoponto EcoTech instalado na faculdade, facilitando o
-                  descarte correto para estudantes.
+                  Direcionamento de equipamentos recuperados para projetos
+                  educacionais e comunitários, ampliando o acesso à tecnologia
+                  com autonomia e cidadania.
                 </p>
-                <div class="gallery-source">
-                  <i class="fa-solid fa-camera" aria-hidden="true"></i> Fonte:
-                  Gerado por Gemini IA / Projeto EcoTech
-                </div>
-              </div>
-            </article>
-
-            <article
-              class="gallery-card"
-              data-src="images/educacao-infantil.webp"
-              data-title="Educação Ambiental na Escola"
-              data-desc="Crianças participam de oficina de criatividade e reaproveitamento de lixo eletrônico, aprendendo a importância da reciclagem desde cedo."
-              data-source="Gerado por Gemini IA / Projeto EcoTech"
-            >
-              <img
-                src="images/educacao-infantil.webp"
-                alt="Crianças em sala de aula criando arte com componentes eletrônicos e caixa de arrecadação."
-                loading="lazy"
-              />
-              <div class="gallery-content">
-                <h3>
-                  <button
-                    type="button"
-                    class="gallery-trigger"
-                    aria-haspopup="dialog"
-                  >
-                    Educação Ambiental na Escola
-                    <span class="sr-only">(ampliar imagem)</span>
-                  </button>
-                </h3>
-                <p>
-                  Oficina de criatividade ensina crianças sobre o descarte
-                  correto e reaproveitamento de lixo eletrônico.
-                </p>
-                <div class="gallery-source">
-                  <i class="fa-solid fa-camera" aria-hidden="true"></i> Fonte:
-                  Gerado por Gemini IA / Projeto EcoTech
-                </div>
-              </div>
-            </article>
-
-            <article
-              class="gallery-card"
-              data-src="images/oficina-doacao.webp"
-              data-title="Oficina de Recondicionamento e Doação"
-              data-desc="Aparelhos eletrônicos antigos ou danificados são consertados por voluntários e devolvidos à sociedade através de programas de doação e inclusão digital."
-              data-source="Gerado por Gemini IA / Projeto EcoTech"
-            >
-              <img
-                src="images/oficina-doacao.webp"
-                alt="Oficina comunitária com voluntários recondicionando computadores para doação a famílias carentes."
-                loading="lazy"
-              />
-              <div class="gallery-content">
-                <h3>
-                  <button
-                    type="button"
-                    class="gallery-trigger"
-                    aria-haspopup="dialog"
-                  >
-                    Oficina de Recondicionamento e Doação
-                    <span class="sr-only">(ampliar imagem)</span>
-                  </button>
-                </h3>
-                <p>
-                  Aparelhos eletrônicos são consertados por voluntários e
-                  devolvidos à sociedade através de doação.
-                </p>
-                <div class="gallery-source">
-                  <i class="fa-solid fa-camera" aria-hidden="true"></i> Fonte:
-                  Gerado por Gemini IA / Projeto EcoTech
-                </div>
-              </div>
-            </article>
-
-            <article
-              class="gallery-card"
-              data-src="images/entrega-doacao.webp"
-              data-title="Entrega e Inclusão Digital"
-              data-desc="O ciclo da sustentabilidade se completa com a entrega de equipamentos recondicionados a famílias e estudantes, promovendo a inclusão digital e a cidadania."
-              data-source="Gerado por Gemini IA / Projeto EcoTech"
-            >
-              <img
-                src="images/entrega-doacao.webp"
-                alt="Atendente da EcoTech entrega um computador recondicionado a uma mãe e ao filho dela, que sorriem."
-                loading="lazy"
-              />
-              <div class="gallery-content">
-                <h3>
-                  <button
-                    type="button"
-                    class="gallery-trigger"
-                    aria-haspopup="dialog"
-                  >
-                    Entrega e Inclusão Digital
-                    <span class="sr-only">(ampliar imagem)</span>
-                  </button>
-                </h3>
-                <p>
-                  Famílias e estudantes recebem computadores recondicionados,
-                  promovendo a inclusão digital e cidadania.
-                </p>
-                <div class="gallery-source">
-                  <i class="fa-solid fa-camera" aria-hidden="true"></i> Fonte:
-                  Gerado por Gemini IA / Projeto EcoTech
-                </div>
               </div>
             </article>
           </div>
         </div>
       </section>
 
-      <!-- Modal Lightbox -->
-      <div id="lightboxModal" class="lightbox-modal">
-        <div
-          class="lightbox-content"
-          role="dialog"
-          aria-modal="true"
-          aria-labelledby="lightboxTitle"
-          aria-describedby="lightboxDesc"
-        >
-          <button
-            type="button"
-            class="lightbox-close"
-            aria-label="Fechar imagem ampliada"
-          >
-            <span aria-hidden="true">&times;</span>
-          </button>
-          <img id="lightboxImg" src="" alt="" />
-          <div class="lightbox-body">
-            <h3 id="lightboxTitle"></h3>
-            <p id="lightboxDesc"></p>
-            <div id="lightboxSource" class="gallery-source"></div>
+      <!-- GUIA RÁPIDO DE NAVEGAÇÃO POR TECLADO -->
+      <section id="atalhos-teclado" class="section disposal">
+        <div class="container">
+          <div class="section-heading center">
+            <span class="section-label">Guia de interação</span>
+            <h2>Como navegar pelo site usando apenas o teclado</h2>
+            <p>
+              Comandos essenciais para percorrer menus, links, botões e janelas
+              modais com previsibilidade.
+            </p>
+          </div>
+
+          <div class="steps">
+            <article class="step">
+              <span class="step-number">Tab</span>
+              <h3>Avançar foco</h3>
+              <p>
+                Move o cursor de foco para o próximo link, botão, menu ou
+                controle interativo disponível na página.
+              </p>
+            </article>
+
+            <article class="step">
+              <span class="step-number">Shift + Tab</span>
+              <h3>Voltar foco</h3>
+              <p>
+                Retorna o foco para o elemento interativo anterior na ordem de
+                leitura da página.
+              </p>
+            </article>
+
+            <article class="step">
+              <span class="step-number">Enter / Espaço</span>
+              <h3>Acionar controles</h3>
+              <p>
+                Abre links, expande o menu ou o submenu Mídia, aciona botões e
+                abre a visualização ampliada na galeria.
+              </p>
+            </article>
+
+            <article class="step">
+              <span class="step-number">Esc</span>
+              <h3>Fechar janelas e menus</h3>
+              <p>
+                Fecha o modal ampliado da galeria, o submenu ou o menu mobile,
+                devolvendo o foco ao controle de origem.
+              </p>
+            </article>
           </div>
         </div>
-      </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="cta">
+        <div class="container cta-content">
+          <div>
+            <span class="section-label">Suporte e sugestões</span>
+            <h2>Encontrou alguma barreira de acesso? Fale com a equipe.</h2>
+          </div>
+
+          <a href="#contato" class="btn btn-light">Ir para contato</a>
+        </div>
+      </section>
 
       <!-- Botão flutuante do WhatsApp -->
       <a
@@ -358,9 +346,9 @@
             <li><a href="index.html#sobre">Sobre</a></li>
             <li><a href="index.html#impacto-ambiental">Impacto</a></li>
             <li><a href="index.html#descarte">Descarte correto</a></li>
+            <li><a href="acessibilidade.html">Acessibilidade</a></li>
             <li><a href="galeria.html">Galeria</a></li>
             <li><a href="midia.html">Multimídia</a></li>
-            <li><a href="acessibilidade.html">Acessibilidade</a></li>
           </ul>
         </div>
 
@@ -380,19 +368,6 @@
       </div>
     </footer>
 
-    <script src="funcionalidades/galeria.js"></script>
     <script src="funcionalidades/acessibilidade.js"></script>
-        <!-- Início do código do VLibras -->
-    <div vw class="enabled">
-        <div vw-access-button class="active"></div>
-        <div vw-plugin-wrapper>
-            <div class="vw-plugin-top-wrapper"></div>
-        </div>
-    </div>
-    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-    <script>
-        new window.VLibras.Widget('https://vlibras.gov.br/app');
-    </script>
-    <!-- Fim do código do VLibras -->
   </body>
 </html>
