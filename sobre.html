@@ -16,7 +16,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
 
   <title>Sobre a EcoTech - História, missão, visão e valores</title>
-</head>
+  <link rel="stylesheet" href="css/menu.css" />
+  </head>
 
 <body>
   <!-- Link para facilitar a navegação por teclado -->
@@ -39,13 +40,21 @@
 
       <nav id="menu-principal" class="navigation" aria-label="Navegação principal">
         <ul class="nav-list">
-          <li><a href="index.html#inicio">Início</a></li>
+                    <li><a href="index.html#inicio">Início</a></li>
           <li><a href="sobre.html" class="active" aria-current="page">Sobre</a></li>
           <li><a href="index.html#impacto-ambiental">Impacto</a></li>
-          <li><a href="galeria.html">Galeria</a></li>
-          <li><a href="midia.html">Multimídia</a></li>
+          <li><a href="index.html#descarte">Descarte correto</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li class="dropdown">
+            <a href="#" class="drop-btn" role="button" aria-haspopup="true" aria-expanded="false" aria-controls="submenu-midia">Mídia <i class="fa-solid fa-chevron-down" aria-hidden="true"></i></a>
+            <ul class="dropdown-menu" id="submenu-midia">
+              <li><a href="galeria.html">Galeria</a></li>
+              <li><a href="midia.html">Multimídia</a></li>
+            </ul>
+          </li>
           <li><a href="noticias.html">Notícias</a></li>
-          <li><a href="orcamento_hospedagem.html">Orçamento</a></li>
+          <li><a href="orcamento_hospedagem.html">Hospedagem</a></li>
+          <li><a href="acessibilidade.html">Acessibilidade</a></li>
           <li><a href="contato.html">Contato</a></li>
         </ul>
       </nav>
@@ -399,7 +408,7 @@
           <li><a href="index.html#descarte">Descarte</a></li>
           <li><a href="galeria.html">Galeria</a></li>
           <li><a href="midia.html">Multimídia</a></li>
-          <li><a href="orcamento_hospedagem.html">Orçamento</a></li>
+          <li><a href="orcamento_hospedagem.html">Hospedagem</a></li>
         </ul>
       </div>
 

@@ -15,8 +15,9 @@
   <link rel="stylesheet" href="css/orcamento.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
 
-  <title>Orçamento de hospedagem e domínio - EcoTech</title>
-</head>
+  <title>Hospedagem e domínio — cenários de custo | EcoTech</title>
+  <link rel="stylesheet" href="css/menu.css" />
+  </head>
 
 <body>
   <a href="#conteudo" class="skip-link"> Pular para o conteúdo principal </a>
@@ -38,13 +39,21 @@
 
       <nav id="menu-principal" class="navigation" aria-label="Navegação principal">
         <ul class="nav-list">
-          <li><a href="index.html#inicio">Início</a></li>
+                    <li><a href="index.html#inicio">Início</a></li>
           <li><a href="sobre.html">Sobre</a></li>
           <li><a href="index.html#impacto-ambiental">Impacto</a></li>
-          <li><a href="galeria.html">Galeria</a></li>
-          <li><a href="midia.html">Multimídia</a></li>
+          <li><a href="index.html#descarte">Descarte correto</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li class="dropdown">
+            <a href="#" class="drop-btn" role="button" aria-haspopup="true" aria-expanded="false" aria-controls="submenu-midia">Mídia <i class="fa-solid fa-chevron-down" aria-hidden="true"></i></a>
+            <ul class="dropdown-menu" id="submenu-midia">
+              <li><a href="galeria.html">Galeria</a></li>
+              <li><a href="midia.html">Multimídia</a></li>
+            </ul>
+          </li>
           <li><a href="noticias.html">Notícias</a></li>
-          <li><a href="orcamento_hospedagem.html" class="active" aria-current="page">Orçamento</a></li>
+          <li><a href="orcamento_hospedagem.html" class="active" aria-current="page">Hospedagem</a></li>
+          <li><a href="acessibilidade.html">Acessibilidade</a></li>
           <li><a href="contato.html">Contato</a></li>
         </ul>
       </nav>
@@ -55,7 +64,7 @@
     <!-- HERO -->
     <section class="page-hero" aria-labelledby="orcamento-titulo">
       <div class="container page-hero-content">
-        <span class="tag"> <i class="fa-solid fa-file-invoice-dollar" aria-hidden="true"></i> Página 10 · Orçamento </span>
+        <span class="tag"> <i class="fa-solid fa-file-invoice-dollar" aria-hidden="true"></i> Página 10 · Hospedagem </span>
 
         <h1 id="orcamento-titulo">
           Quanto custa colocar a EcoTech
@@ -635,7 +644,7 @@
           <li><a href="index.html#descarte">Descarte</a></li>
           <li><a href="galeria.html">Galeria</a></li>
           <li><a href="midia.html">Multimídia</a></li>
-          <li><a href="orcamento_hospedagem.html">Orçamento</a></li>
+          <li><a href="orcamento_hospedagem.html">Hospedagem</a></li>
         </ul>
       </div>
 
