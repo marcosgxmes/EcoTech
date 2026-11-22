@@ -1362,16 +1362,26 @@ button:focus-visible {
     padding: 10px 20px;
     display: block;
     white-space: nowrap;
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 0.95rem;
+    font-weight: 600;
     text-decoration: none;
-    transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Remove a linha verde de Galeria e Multimídia */
+.nav-list .dropdown-menu li a::after,
+.nav-list .dropdown-menu li a:hover::after {
+    display: none !important;
+    content: none !important;
+    width: 0 !important;
 }
 
 /* Efeito ao passar o mouse nas opções do sub-menu */
 .nav-list .dropdown-menu li a:hover {
     background-color: #F3F4F6;
+    color: var(--green-dark) !important;
 }
+
 .video-container {
     position: relative;
     width: 100%;
@@ -1411,47 +1421,7 @@ button:focus-visible {
         margin: 10px 0;
     }
 }
-/* Por padrão, o botão de hambúrguer fica escondido em telas grandes */
-.menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    color: #ffffff;
-    font-size: 24px;
-    cursor: pointer;
-    padding: 10px;
-}
 
-/* Regras para quando a tela for menor (celular) */
-@media (max-width: 768px) {
-    /* Mostra o botão hambúrguer */
-    .menu-toggle {
-        display: block;
-    }
-
-    /* Esconde a lista de navegação por padrão no celular */
-    .nav-list {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: #0b2525; /* Cor de fundo do seu menu */
-        padding: 20px 0;
-        box-shadow: 0 10px 15px rgba(0,0,0,0.3);
-    }
-
-    /* Quando a classe 'active' for acionada pelo JavaScript, o menu aparece */
-    .nav-list.active {
-        display: flex;
-    }
-
-    .nav-list li {
-        text-align: center;
-        margin: 10px 0;
-    }
-}
 /* --- AJUSTESFINAIS DE RESPONSIVIDADE PARA CELULAR --- */
 @media (max-width: 768px) {
     /* Reduz o padding excessivo dos cards em dispositivos pequenos */
