@@ -63,9 +63,9 @@
           <div class="form-heading"><span class="page-kicker">Mande sua mensagem</span><h2 id="form-title">Como podemos ajudar?</h2><p>Os campos com <span class="required-mark" aria-hidden="true">*</span> são obrigatórios.</p></div>
           <form id="contact-form">
             <div class="form-grid">
-              <div class="form-field field-full"><label for="name">Nome completo <span class="required-mark" aria-hidden="true">*</span></label><input id="name" name="name" type="text" autocomplete="name" minlength="2" maxlength="80" pattern="[A-Za-zÀ-ÖØ-öø-ÿÇç' .-]{2,80}" title="Use de 2 a 80 letras e pontuação comum." required /></div>
+              <div class="form-field field-full"><label for="name">Nome completo <span class="required-mark" aria-hidden="true">*</span></label><input id="name" name="name" type="text" autocomplete="name" minlength="2" maxlength="80" pattern="[A-Za-zÀ-ÖØ-öø-ÿÇç' .\-]{2,80}" title="Use de 2 a 80 letras e pontuação comum." required /></div>
               <div class="form-field"><label for="email">E-mail <span class="required-mark" aria-hidden="true">*</span></label><input id="email" name="email" type="email" autocomplete="email" maxlength="254" placeholder="voce@exemplo.com" required /></div>
-              <div class="form-field"><label for="phone">Telefone com DDD <span class="required-mark" aria-hidden="true">*</span></label><input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" pattern="\+?[0-9() .-]{9,19}" title="Informe o telefone com DDD." placeholder="(11) 99999-0000" required /></div>
+              <div class="form-field"><label for="phone">Telefone com DDD <span class="required-mark" aria-hidden="true">*</span></label><input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" pattern="\+?[0-9\(\) .\-]{9,19}" title="Informe o telefone com DDD." placeholder="(11) 99999-0000" required /></div>
               <div class="form-field"><label for="contactDate">Data preferida para contato <span class="required-mark" aria-hidden="true">*</span></label><input id="contactDate" name="contactDate" type="date" required /></div>
               <div class="form-field"><label for="equipmentCount">Quantidade de equipamentos <span class="required-mark" aria-hidden="true">*</span></label><input id="equipmentCount" name="equipmentCount" type="number" min="1" max="99" step="1" inputmode="numeric" required /></div>
               <div class="form-field field-full"><label for="subject">Assunto <span class="required-mark" aria-hidden="true">*</span></label><select id="subject" name="subject" required><option value="">Selecione um assunto</option><option value="Descarte eletrônico">Descarte eletrônico</option><option value="Parcerias">Parcerias</option><option value="Dúvida sobre o projeto">Dúvida sobre o projeto</option><option value="Outro">Outro</option></select></div>
@@ -119,7 +119,11 @@
         contactForm.reset();
       } catch (error) {
         console.error('Falha no envio do formulário EcoTech.', error);
-        statusMessage.textContent = 'Não foi possível enviar sua mensagem agora. Tente novamente mais tarde.';
+        if (error?.status === 412 && /insufficient authentication scopes/i.test(error?.text || '')) {
+          statusMessage.textContent = 'A conta Gmail conectada ao serviço de envio precisa ser autorizada novamente no EmailJS. Nenhuma mensagem foi enviada.';
+        } else {
+          statusMessage.textContent = 'Não foi possível enviar sua mensagem agora. Tente novamente mais tarde.';
+        }
       } finally {
         submitButton.disabled = false;
         submitButton.innerHTML = originalButtonMarkup;
