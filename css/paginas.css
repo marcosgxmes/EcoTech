@@ -1,6 +1,11 @@
-/* Componentes compartilhados das páginas internas EcoTech.
-   Complementa css/style.css e os arquivos específicos de cada página. */
+/* =========================================
+   ECOTECH — COMPONENTES DE PÁGINAS INTERNAS
+   (usado por sobre.html, projetos.html e orcamento_hospedagem.html)
+========================================= */
 
+/* =========================================
+   HERO DAS PÁGINAS INTERNAS
+========================================= */
 .page-hero {
   position: relative;
   overflow: hidden;
@@ -13,13 +18,13 @@
 }
 
 .page-hero::after {
+  content: "♻";
   position: absolute;
   right: -60px;
   bottom: -110px;
-  color: rgba(255, 255, 255, 0.035);
-  content: "♻";
   font-size: 26rem;
   line-height: 1;
+  color: rgba(255, 255, 255, 0.035);
   pointer-events: none;
 }
 
@@ -37,7 +42,7 @@
   padding: 8px 18px;
   border: 1px solid rgba(32, 178, 107, 0.45);
   border-radius: 999px;
-  background: rgba(32, 178, 107, 0.1);
+  background-color: rgba(32, 178, 107, 0.1);
   color: #7fe3b3;
   font-size: 0.78rem;
   font-weight: 700;
@@ -46,10 +51,10 @@
 }
 
 .page-hero h1 {
-  margin-bottom: 24px;
-  font-size: clamp(2.1rem, 5vw, 3.2rem);
+  font-size: 3.2rem;
   line-height: 1.12;
   letter-spacing: -1.5px;
+  margin-bottom: 24px;
 }
 
 .page-hero h1 strong {
@@ -66,6 +71,7 @@
   margin-top: 34px;
 }
 
+/* Selo de contexto (ex.: página 10 do projeto) */
 .page-hero .page-ref {
   display: inline-block;
   margin-top: 26px;
@@ -74,19 +80,12 @@
   letter-spacing: 0.5px;
 }
 
-@media (min-width: 901px) {
-  .page-hero h1 strong {
-    white-space: nowrap;
-  }
-}
-
 @media (max-width: 900px) {
   .page-hero {
     padding: 70px 0 90px;
   }
-
   .page-hero h1 {
-    font-size: clamp(2.1rem, 5vw, 2.6rem);
+    font-size: 2.6rem;
   }
 }
 
@@ -94,13 +93,18 @@
   .page-hero {
     padding: 55px 0 80px;
   }
-
   .page-hero h1 {
     font-size: 2.1rem;
     letter-spacing: -1px;
   }
-
   .page-hero p {
     font-size: 0.98rem;
+  }
+}
+
+/* Mantém o destaque do título inteiro na mesma linha em telas grandes */
+@media (min-width: 901px) {
+  .page-hero h1 strong {
+    white-space: nowrap;
   }
 }

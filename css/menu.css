@@ -1,0 +1,97 @@
+/* Ajustes compartilhados para acomodar o menu completo e mantê-lo responsivo. */
+@media (min-width: 1101px) {
+  .header-content .nav-list {
+    gap: clamp(8px, 0.8vw, 12px);
+  }
+
+  .header-content .nav-list > li > a,
+  .header-content .nav-list > li.dropdown > .drop-btn {
+    font-size: clamp(0.82rem, 0.88vw, 0.92rem);
+    white-space: nowrap;
+  }
+}
+
+/* Em tablets, o menu completo recolhe no mesmo botão hambúrguer. */
+@media (min-width: 769px) and (max-width: 1100px) {
+  .header-content {
+    position: relative;
+  }
+
+  .header-content > .menu-toggle {
+    display: flex !important;
+    margin: 0 0 0 auto !important;
+  }
+
+  .header-content > .navigation {
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin: 0;
+    padding: 12px 20px 20px;
+    background: var(--dark-blue);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+  }
+
+  .header-content > .navigation.is-open {
+    display: block !important;
+  }
+
+  .header-content > .navigation .nav-list {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+  }
+
+  .header-content > .navigation .nav-list > li {
+    width: 100%;
+  }
+
+  .header-content > .navigation .nav-list > li > a,
+  .header-content > .navigation .nav-list > li.dropdown > .drop-btn {
+    display: block;
+    padding: 13px 10px;
+    font-size: 0.9rem;
+  }
+
+  .header-content > .navigation .nav-list a::after {
+    bottom: 5px;
+    left: 10px;
+    max-width: calc(100% - 20px);
+  }
+
+  .header-content .nav-list .dropdown.is-open .dropdown-menu {
+    display: block;
+    position: static;
+    min-width: 0;
+    margin-top: 8px;
+    padding: 0 0 0 14px;
+    border: 0;
+    border-left: 2px solid rgba(32, 178, 107, 0.5);
+    border-radius: 0;
+    box-shadow: none;
+    background: transparent;
+  }
+
+  .header-content .nav-list .dropdown-menu li a {
+    color: #dbe8e3 !important;
+    padding: 8px 0;
+    font-size: 0.9rem;
+  }
+
+  .header-content .nav-list .dropdown-menu li a:hover {
+    background: transparent;
+    color: var(--green) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-content .nav-list {
+    gap: 4px;
+  }
+}
