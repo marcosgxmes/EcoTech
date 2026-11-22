@@ -1,0 +1,662 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Relatório comparativo de hospedagem e domínio para o projeto EcoTech, com três cenários de orçamento e recomendação técnica." />
+  <meta name="keywords" content="orçamento hospedagem, comparativo hospedagem, domínio, GitHub Pages, Hostinger, Registro.br" />
+  <meta name="author" content="EcoTech" />
+
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/paginas.css" />
+  <link rel="stylesheet" href="css/orcamento.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+  <title>Orçamento de hospedagem e domínio - EcoTech</title>
+</head>
+
+<body>
+  <a href="#conteudo" class="skip-link"> Pular para o conteúdo principal </a>
+
+  <!-- CABEÇALHO -->
+  <header class="header">
+    <div class="container header-content">
+      <a href="index.html" class="logo" aria-label="EcoTech - Página inicial">
+        <span class="logo-icon" aria-hidden="true">♻</span>
+        <span>Eco<span>Tech</span></span>
+      </a>
+
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false"
+        aria-controls="menu-principal">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav id="menu-principal" class="navigation" aria-label="Navegação principal">
+        <ul class="nav-list">
+          <li><a href="index.html#inicio">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="index.html#impacto-ambiental">Impacto</a></li>
+          <li><a href="galeria.html">Galeria</a></li>
+          <li><a href="midia.html">Multimídia</a></li>
+          <li><a href="noticias.html">Notícias</a></li>
+          <li><a href="orcamento_hospedagem.html" class="active" aria-current="page">Orçamento</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <!-- HERO -->
+    <section class="page-hero" aria-labelledby="orcamento-titulo">
+      <div class="container page-hero-content">
+        <span class="tag"> <i class="fa-solid fa-file-invoice-dollar" aria-hidden="true"></i> Página 10 · Orçamento </span>
+
+        <h1 id="orcamento-titulo">
+          Quanto custa colocar a EcoTech
+          <strong>no ar?</strong>
+        </h1>
+
+        <p>
+          Relatório comparativo de hospedagem e domínio para um site estático em
+          HTML, CSS e JavaScript. O levantamento reúne opções gratuitas, planos
+          econômicos e alternativas profissionais, com três cenários de orçamento.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#comparativo" class="btn btn-primary"> Ver comparativo </a>
+
+          <a href="#cenarios" class="btn btn-secondary"> Ir para os orçamentos </a>
+        </div>
+
+        <span class="page-ref">Valores consultados em 19 de novembro de 2026 · sujeitos a alteração</span>
+      </div>
+    </section>
+
+    <!-- REQUISITOS -->
+    <section class="requirements" aria-label="Requisitos técnicos do projeto">
+      <div class="container">
+        <div class="req-grid">
+          <div class="req-card">
+            <i class="fa-solid fa-file-code" aria-hidden="true"></i>
+            <h3>Site estático</h3>
+            <p>Somente HTML, CSS e JavaScript: não há back-end nem banco de dados.</p>
+          </div>
+
+          <div class="req-card">
+            <i class="fa-solid fa-photo-film" aria-hidden="true"></i>
+            <h3>Cerca de 35 MB</h3>
+            <p>Imagens WebP, um vídeo e um podcast em MP3 — pouco peso para qualquer plano.</p>
+          </div>
+
+          <div class="req-card">
+            <i class="fa-solid fa-lock" aria-hidden="true"></i>
+            <h3>HTTPS</h3>
+            <p>Certificado SSL para segurança e para não gerar alerta no navegador.</p>
+          </div>
+
+          <div class="req-card">
+            <i class="fa-solid fa-globe" aria-hidden="true"></i>
+            <h3>Domínio próprio</h3>
+            <p>Endereço curto e memorizável, útil para divulgar o projeto em trabalhos e eventos.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPARATIVO -->
+    <section id="comparativo" class="section" aria-labelledby="comparativo-titulo">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-label"> Comparativo </span>
+
+          <h2 id="comparativo-titulo">Hospedagem: opções gratuitas e pagas</h2>
+
+          <p>
+            A coluna de renovação é a mais importante: é ela que define o custo
+            real depois do primeiro contrato. Preços promocionais costumam valer
+            apenas para o ciclo pré-pago.
+          </p>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <caption>Valores em reais, consultados nos sites oficiais em 19/11/2026.</caption>
+            <thead>
+              <tr>
+                <th scope="col">Solução</th>
+                <th scope="col">Tipo</th>
+                <th scope="col">Preço de entrada</th>
+                <th scope="col">Renovação</th>
+                <th scope="col">Indicado para</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">GitHub Pages <span class="badge">Recomendado</span></th>
+                <td data-label="Tipo">Estática (gratuita)</td>
+                <td class="price price--free" data-label="Preço de entrada">R$ 0,00</td>
+                <td class="price price--free" data-label="Renovação">R$ 0,00</td>
+                <td data-label="Indicado para">Site estático com HTTPS e domínio próprio, sem custo de hospedagem.</td>
+              </tr>
+
+              <tr>
+                <th scope="row">Cloudflare Pages</th>
+                <td data-label="Tipo">Estática (gratuita)</td>
+                <td class="price price--free" data-label="Preço de entrada">R$ 0,00</td>
+                <td class="price price--free" data-label="Renovação">R$ 0,00</td>
+                <td data-label="Indicado para">Banda ilimitada no plano gratuito e deploy automático a cada envio.</td>
+              </tr>
+
+              <tr>
+                <th scope="row">Netlify Free</th>
+                <td data-label="Tipo">Estática (gratuita)</td>
+                <td class="price price--free" data-label="Preço de entrada">R$ 0,00</td>
+                <td class="price price--free" data-label="Renovação">R$ 0,00</td>
+                <td data-label="Indicado para">100 GB de tráfego por mês e formulários simples incluídos.</td>
+              </tr>
+
+              <tr>
+                <th scope="row">Hostinger Single</th>
+                <td data-label="Tipo">Compartilhada</td>
+                <td class="price" data-label="Preço de entrada">R$ 5,99/mês</td>
+                <td class="price" data-label="Renovação">R$ 23,99/mês</td>
+                <td data-label="Indicado para">1 site, 10 GB SSD e 1 conta de e-mail. Exige pré-pago de 48 meses.</td>
+              </tr>
+
+              <tr>
+                <th scope="row">Hostinger Premium</th>
+                <td data-label="Tipo">Compartilhada</td>
+                <td class="price" data-label="Preço de entrada">R$ 9,99/mês</td>
+                <td class="price" data-label="Renovação">R$ 38,99/mês</td>
+                <td data-label="Indicado para">Mais sites e armazenamento NVMe, com domínio grátis no 1º ano.</td>
+              </tr>
+
+              <tr>
+                <th scope="row">KingHost Hospedagem I</th>
+                <td data-label="Tipo">Compartilhada (servidores no Brasil)</td>
+                <td class="price" data-label="Preço de entrada">R$ 9,99/mês</td>
+                <td class="price" data-label="Renovação">Preço regular (não publicado)</td>
+                <td data-label="Indicado para">Suporte 24/7 em português e dados hospedados no país.</td>
+              </tr>
+
+              <tr>
+                <th scope="row">Locaweb Go</th>
+                <td data-label="Tipo">Compartilhada</td>
+                <td class="price" data-label="Preço de entrada">R$ 5,90/mês</td>
+                <td class="price" data-label="Renovação">Não informado (cheio R$ 24,90)</td>
+                <td data-label="Indicado para">Entrada barata no primeiro ciclo; renovação precisa ser confirmada.</td>
+              </tr>
+
+              <tr>
+                <th scope="row">HostGator</th>
+                <td data-label="Tipo">Compartilhada</td>
+                <td class="price" data-label="Preço de entrada">a partir de R$ 20,09/mês</td>
+                <td class="price" data-label="Renovação">Não informado na página</td>
+                <td data-label="Indicado para">Planos pré-pagos com até 30 dias de reembolso.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="table-note">
+          * A KingHost informa os planos em reais, mas não deixa claro a qual ciclo
+          cada valor corresponde e indica que a renovação é cobrada pelo preço
+          regular. Tributos aproximados de 10,15% incidem sobre o valor. A página
+          da HostGator consultada não exibia valores de renovação em reais.
+        </p>
+      </div>
+    </section>
+
+    <!-- DOMÍNIO -->
+    <section class="section" aria-labelledby="dominio-titulo">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-label"> Domínio </span>
+
+          <h2 id="dominio-titulo">Quanto custa o endereço do site</h2>
+
+          <p>
+            O domínio é o único custo obrigatório em qualquer cenário: ele é pago
+            por ano e não é incluído nas hospedagens gratuitas.
+          </p>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <caption>Preços de registro e renovação consultados em 19/11/2026.</caption>
+            <thead>
+              <tr>
+                <th scope="col">Extensão</th>
+                <th scope="col">Onde registrar</th>
+                <th scope="col">Valor anual</th>
+                <th scope="col">Observações</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">.com.br</th>
+                <td data-label="Onde registrar">Registro.br</td>
+                <td class="price" data-label="Valor anual">R$ 40,00/ano</td>
+                <td data-label="Observações">Registro e renovação no mesmo valor; é possível pagar até 10 anos.</td>
+              </tr>
+
+              <tr>
+                <th scope="row">.com</th>
+                <td data-label="Onde registrar">Registradores internacionais</td>
+                <td class="price" data-label="Valor anual">R$ 50,00 a R$ 90,00/ano</td>
+                <td data-label="Observações">Faixa estimada: varia por registrador e o 1º ano costuma ter promoção.</td>
+              </tr>
+
+              <tr>
+                <th scope="row">Subdomínio gratuito</th>
+                <td data-label="Onde registrar">GitHub Pages, Cloudflare, Netlify</td>
+                <td class="price price--free" data-label="Valor anual">R$ 0,00</td>
+                <td data-label="Observações">Endereços como <em>ecotech.github.io</em>; não é um domínio próprio.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- CENÁRIOS -->
+    <section id="cenarios" class="section" aria-labelledby="cenarios-titulo">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-label"> Orçamentos </span>
+
+          <h2 id="cenarios-titulo">Três cenários para publicar o projeto</h2>
+
+          <p>
+            Os totais consideram hospedagem, certificado SSL e domínio
+            <em>.com.br</em>. A projeção de quatro anos mostra o efeito da
+            renovação no orçamento.
+          </p>
+        </div>
+
+        <div class="budget-grid">
+          <article class="budget-card budget-card--featured">
+            <div class="budget-head">
+              <h3>Cenário A</h3>
+              <span class="budget-label">Recomendado</span>
+            </div>
+
+            <p class="budget-sub">Gratuito com domínio próprio</p>
+
+            <div class="budget-rows">
+              <div class="budget-row">
+                <span>Hospedagem (GitHub Pages)</span>
+                <strong>R$ 0,00</strong>
+              </div>
+
+              <div class="budget-row">
+                <span>Certificado SSL</span>
+                <strong>R$ 0,00</strong>
+              </div>
+
+              <div class="budget-row">
+                <span>Domínio .com.br</span>
+                <strong>R$ 40,00/ano</strong>
+              </div>
+
+              <div class="budget-row">
+                <span>Renovação do plano</span>
+                <strong>R$ 0,00</strong>
+              </div>
+            </div>
+
+            <div class="budget-total">
+              <span>Total no 1º ano</span>
+              <strong>R$ 40,00</strong>
+            </div>
+
+            <p class="budget-foot">
+              Equivale a R$ 3,33/mês. Em quatro anos: <strong>R$ 160,00</strong>.
+            </p>
+          </article>
+
+          <article class="budget-card">
+            <div class="budget-head">
+              <h3>Cenário B</h3>
+            </div>
+
+            <p class="budget-sub">Econômico com hospedagem tradicional</p>
+
+            <div class="budget-rows">
+              <div class="budget-row">
+                <span>Hostinger Single (48 meses)</span>
+                <strong>R$ 287,52</strong>
+              </div>
+
+              <div class="budget-row">
+                <span>Domínio no 1º ano</span>
+                <strong>Grátis</strong>
+              </div>
+
+              <div class="budget-row">
+                <span>Domínio do 2º ano em diante</span>
+                <strong>R$ 40,00/ano</strong>
+              </div>
+
+              <div class="budget-row">
+                <span>Renovação do plano</span>
+                <strong>R$ 23,99/mês</strong>
+              </div>
+            </div>
+
+            <div class="budget-total">
+              <span>Total no 1º ano</span>
+              <strong>R$ 287,52</strong>
+            </div>
+
+            <p class="budget-foot">
+              Pago à vista, equivalente a R$ 5,99/mês. Em quatro anos:
+              <strong>R$ 407,52</strong>.
+            </p>
+          </article>
+
+          <article class="budget-card">
+            <div class="budget-head">
+              <h3>Cenário C</h3>
+            </div>
+
+            <p class="budget-sub">Profissional com e-mail e mais recursos</p>
+
+            <div class="budget-rows">
+              <div class="budget-row">
+                <span>Hostinger Premium (48 meses)</span>
+                <strong>R$ 479,52</strong>
+              </div>
+
+              <div class="budget-row">
+                <span>Domínio no 1º ano</span>
+                <strong>Grátis</strong>
+              </div>
+
+              <div class="budget-row">
+                <span>Domínio do 2º ano em diante</span>
+                <strong>R$ 40,00/ano</strong>
+              </div>
+
+              <div class="budget-row">
+                <span>Renovação do plano</span>
+                <strong>R$ 38,99/mês</strong>
+              </div>
+            </div>
+
+            <div class="budget-total">
+              <span>Total no 1º ano</span>
+              <strong>R$ 479,52</strong>
+            </div>
+
+            <p class="budget-foot">
+              Equivale a R$ 9,99/mês. Em quatro anos:
+              <strong>R$ 599,52</strong>.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- GRÁFICO -->
+    <section class="section" aria-labelledby="grafico-titulo">
+      <div class="container">
+        <div class="chart">
+          <h3 id="grafico-titulo">Custo acumulado em quatro anos</h3>
+          <p>Hospedagem, SSL e domínio <em>.com.br</em> — valores em reais.</p>
+
+          <div class="chart-row">
+            <span class="chart-name">Cenário A · Gratuito</span>
+            <div class="chart-track">
+              <div class="chart-bar" style="width: 26.7%"></div>
+            </div>
+            <span class="chart-value">R$ 160,00</span>
+          </div>
+
+          <div class="chart-row">
+            <span class="chart-name">Cenário B · Econômico</span>
+            <div class="chart-track">
+              <div class="chart-bar chart-bar--alt" style="width: 68%"></div>
+            </div>
+            <span class="chart-value">R$ 407,52</span>
+          </div>
+
+          <div class="chart-row">
+            <span class="chart-name">Cenário C · Profissional</span>
+            <div class="chart-track">
+              <div class="chart-bar chart-bar--alt" style="width: 100%"></div>
+            </div>
+            <span class="chart-value">R$ 599,52</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RECOMENDAÇÃO -->
+    <section class="section" aria-labelledby="recomendacao-titulo">
+      <div class="container">
+        <div class="recommend">
+          <div>
+            <span class="section-label"> Conclusão </span>
+
+            <h2 id="recomendacao-titulo">
+              Para um site estático, pagar hospedagem não é necessário
+            </h2>
+
+            <p>
+              A EcoTech é composta por páginas HTML, CSS e JavaScript, sem banco
+              de dados nem processamento no servidor. Nesse cenário, o GitHub
+              Pages entrega HTTPS, publicação automática a cada atualização e
+              desempenho adequado sem custo mensal.
+            </p>
+
+            <p>
+              O investimento recomendado é apenas o domínio <em>.com.br</em> no
+              Registro.br: R$ 40,00 por ano. O resultado é um endereço próprio,
+              com aparência profissional, por menos de R$ 4,00 por mês.
+            </p>
+
+            <p>
+              A hospedagem paga passa a fazer sentido se o projeto evoluir para
+              formulário de contato com envio de e-mail, painel administrativo,
+              banco de dados ou área restrita — situações que exigem PHP, Node.js
+              ou e-mail com o domínio próprio.
+            </p>
+          </div>
+
+          <aside class="recommend-aside">
+            <h3>Quando escolher cada opção</h3>
+
+            <ul>
+              <li>Entrega acadêmica e portfólio: GitHub Pages + .com.br</li>
+              <li>Precisa de e-mail @ecotech.com.br: plano pago com e-mail</li>
+              <li>Formulário com envio real: Netlify Forms ou serviço externo</li>
+              <li>Site com PHP ou WordPress: hospedagem compartilhada</li>
+              <li>Muitos acessos simultâneos: Cloudflare Pages ou VPS</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHECKLIST -->
+    <section class="section" aria-labelledby="checklist-titulo">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-label"> Atenção </span>
+
+          <h2 id="checklist-titulo">Checklist antes de contratar</h2>
+
+          <p>
+            Armadilhas comuns em planos de hospedagem que costumam aparecer só na
+            hora da renovação.
+          </p>
+        </div>
+
+        <ul class="checklist">
+          <li>
+            <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+            <div>
+              <strong>Preço promocional x renovação</strong>
+              Compare o valor de renovação, não apenas a oferta de entrada.
+            </div>
+          </li>
+
+          <li>
+            <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+            <div>
+              <strong>Ciclo de pagamento</strong>
+              Os preços baixos exigem pré-pago de 36 a 48 meses, pagos à vista.
+            </div>
+          </li>
+
+          <li>
+            <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+            <div>
+              <strong>Domínio “grátis”</strong>
+              A gratuidade costuma valer só no primeiro ano; depois, R$ 40 a R$ 90 por ano.
+            </div>
+          </li>
+
+          <li>
+            <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+            <div>
+              <strong>Tributos e taxas</strong>
+              Alguns provedores acrescentam cerca de 10% de tributos ao valor anunciado.
+            </div>
+          </li>
+
+          <li>
+            <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+            <div>
+              <strong>Backup e suporte</strong>
+              Confirme se há backup automático e suporte em português antes de pagar.
+            </div>
+          </li>
+
+          <li>
+            <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+            <div>
+              <strong>“Ilimitado” tem limites</strong>
+              Planos ilimitados seguem políticas de uso justo e limite de arquivos.
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- FONTES -->
+    <section class="section" aria-labelledby="fontes-titulo">
+      <div class="container">
+        <div class="sources">
+          <h3 id="fontes-titulo">Fontes consultadas em 19/11/2026</h3>
+
+          <ul>
+            <li>
+              Hostinger —
+              <a href="https://www.hostinger.com/br/precos" target="_blank" rel="noopener noreferrer">tabela de
+                preços</a>:
+              Single R$ 5,99/mês (48 meses), renovação R$ 23,99/mês; Premium R$ 9,99/mês, renovação R$ 38,99/mês.
+            </li>
+            <li>
+              KingHost —
+              <a href="https://king.host/hospedagem-de-sites" target="_blank" rel="noopener noreferrer">hospedagem de
+                sites</a>: Hospedagem I R$ 9,99/mês, tributos aproximados de 10,15%.
+            </li>
+            <li>
+              Locaweb —
+              <a href="https://www.locaweb.com.br/hospedagem-de-sites/" target="_blank" rel="noopener noreferrer">planos
+                de hospedagem</a>: Go R$ 5,90/mês no primeiro ciclo (valor cheio R$ 24,90).
+            </li>
+            <li>
+              HostGator —
+              <a href="https://www.hostgator.com.br/precos-hostgator" target="_blank" rel="noopener noreferrer">tabela de
+                preços</a>: planos pré-pagos; valores de renovação não publicados em reais na página.
+            </li>
+            <li>
+              Registro.br —
+              <a href="https://registro.br/dominio/" target="_blank" rel="noopener noreferrer">preços de domínio</a>:
+              R$ 40,00 por ano.
+            </li>
+            <li>
+              GitHub —
+              <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>: hospedagem
+              gratuita de sites estáticos com HTTPS.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+      <div class="container cta-content">
+        <div>
+          <span class="section-label"> Próximo passo </span>
+
+          <h2>Orçamento definido. Falta publicar o projeto.</h2>
+        </div>
+
+        <a href="projetos.html" class="btn btn-light"> Ver os projetos </a>
+      </div>
+    </section>
+
+    <a href="https://wa.me/5511999999999" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
+      aria-label="Entre em contato com a EcoTech pelo WhatsApp" title="Fale conosco pelo WhatsApp">
+      <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+    </a>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer id="contato" class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <span class="logo-icon" aria-hidden="true">♻</span>
+          <span>Eco<span>Tech</span></span>
+        </a>
+
+        <p>Informação e conscientização para um futuro mais sustentável.</p>
+      </div>
+
+      <div class="footer-column">
+        <h2>Navegação</h2>
+
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="index.html#descarte">Descarte</a></li>
+          <li><a href="galeria.html">Galeria</a></li>
+          <li><a href="midia.html">Multimídia</a></li>
+          <li><a href="orcamento_hospedagem.html">Orçamento</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h2>Projeto</h2>
+
+        <p>
+          Projeto acadêmico desenvolvido para a disciplina de Desenvolvimento
+          Web.
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2026 EcoTech. Projeto acadêmico.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="funcionalidades/index.js"></script>
+</body>
+
+</html>
