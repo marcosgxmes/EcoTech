@@ -95,3 +95,14 @@
     gap: 4px;
   }
 }
+
+/* Rótulo da categoria que agrupa Galeria e Multimídia no rodapé. */
+.footer-nav-label {
+  font-weight: 600;
+}
+
+/* Cor padrão do botão flutuante do WhatsApp em todas as páginas, exceto Acessibilidade. */
+.whatsapp-standard .whatsapp-float,
+.whatsapp-standard .whatsapp-float:hover {
+  background-color: #0e7c66 !important;
+}
