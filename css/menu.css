@@ -101,6 +101,19 @@
   font-weight: 600;
 }
 
+/* Os links do rodapé fluem em linhas e quebram automaticamente conforme o espaço disponível. */
+.footer-column .footer-links-list {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  gap: 8px 16px;
+}
+
+.footer-column .footer-links-list > .footer-nav-label {
+  flex-basis: 100%;
+  margin-top: 4px;
+}
+
 /* Cor padrão do botão flutuante do WhatsApp em todas as páginas, exceto Acessibilidade. */
 .whatsapp-standard .whatsapp-float,
 .whatsapp-standard .whatsapp-float:hover {
