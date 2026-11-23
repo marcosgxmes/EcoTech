@@ -1346,8 +1346,15 @@ button:focus-visible {
     border: 1px solid #E5E7EB;
 }
 
-/* Mostra o sub-menu quando o mouse passa em cima de "Mídia" */
-.nav-list .dropdown:hover .dropdown-menu {
+/* Mostra o sub-menu ao passar o mouse APENAS no computador */
+@media (min-width: 1101px) {
+    .nav-list .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+}
+
+/* Abre e fecha o sub-menu pelo clique/toque no celular e tablet */
+.nav-list .dropdown.is-open .dropdown-menu {
     display: block;
 }
 
