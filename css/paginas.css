@@ -1,0 +1,110 @@
+/* =========================================
+   ECOTECH — COMPONENTES DE PÁGINAS INTERNAS
+   (usado por sobre.html, projetos.html e orcamento_hospedagem.html)
+========================================= */
+
+/* =========================================
+   HERO DAS PÁGINAS INTERNAS
+========================================= */
+.page-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 95px 0 100px;
+  background:
+    radial-gradient(circle at 12% 20%, rgba(32, 178, 107, 0.22), transparent 45%),
+    radial-gradient(circle at 88% 80%, rgba(32, 178, 107, 0.14), transparent 42%),
+    linear-gradient(140deg, #061f2b 0%, var(--dark-blue) 45%, #0b3345 100%);
+  color: var(--white);
+}
+
+.page-hero::after {
+  content: "♻";
+  position: absolute;
+  right: -60px;
+  bottom: -110px;
+  font-size: 26rem;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.035);
+  pointer-events: none;
+}
+
+.page-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 760px;
+}
+
+.page-hero .tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 26px;
+  padding: 8px 18px;
+  border: 1px solid rgba(32, 178, 107, 0.45);
+  border-radius: 999px;
+  background-color: rgba(32, 178, 107, 0.1);
+  color: #7fe3b3;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+
+.page-hero h1 {
+  font-size: 3.2rem;
+  line-height: 1.12;
+  letter-spacing: -1.5px;
+  margin-bottom: 24px;
+}
+
+.page-hero h1 strong {
+  color: var(--green);
+}
+
+.page-hero p {
+  max-width: 640px;
+  color: #c3d6d0;
+  font-size: 1.05rem;
+}
+
+.page-hero .hero-buttons {
+  margin-top: 34px;
+}
+
+/* Selo de contexto (ex.: página 10 do projeto) */
+.page-hero .page-ref {
+  display: inline-block;
+  margin-top: 26px;
+  color: #8aa39b;
+  font-size: 0.82rem;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 900px) {
+  .page-hero {
+    padding: 70px 0 90px;
+  }
+  .page-hero h1 {
+    font-size: 2.6rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .page-hero {
+    padding: 55px 0 80px;
+  }
+  .page-hero h1 {
+    font-size: 2.1rem;
+    letter-spacing: -1px;
+  }
+  .page-hero p {
+    font-size: 0.98rem;
+  }
+}
+
+/* Mantém o destaque do título inteiro na mesma linha em telas grandes */
+@media (min-width: 901px) {
+  .page-hero h1 strong {
+    white-space: nowrap;
+  }
+}

@@ -1060,3 +1060,7 @@ img {
     font-size: 27px;
   }
 }
+  .footer-nav-label,
+  .footer-nav-label span {
+    font-weight: 400;
+}

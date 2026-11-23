@@ -1,0 +1,465 @@
+﻿<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Catálogo de projetos e iniciativas de sustentabilidade que atuam na coleta, no recondicionamento e na reciclagem de resíduos eletrônicos no Brasil." />
+  <meta name="keywords"
+    content="projetos de sustentabilidade, lixo eletrônico, logística reversa, reciclagem, cooperativa, recondicionamento" />
+  <meta name="author" content="EcoTech" />
+
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/paginas.css" />
+  <link rel="stylesheet" href="css/projetos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+  <title>Projetos de sustentabilidade - EcoTech</title>
+  <link rel="stylesheet" href="css/menu.css" />
+  </head>
+
+<body class="whatsapp-standard">
+  <a href="#conteudo" class="skip-link"> Pular para o conteúdo principal </a>
+
+  <!-- CABEÇALHO -->
+  <header class="header">
+    <div class="container header-content">
+      <a href="index.html" class="logo" aria-label="EcoTech - Página inicial">
+        <span class="logo-icon" aria-hidden="true">♻</span>
+        <span>Eco<span>Tech</span></span>
+      </a>
+
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false"
+        aria-controls="menu-principal">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav id="menu-principal" class="navigation" aria-label="Navegação principal">
+        <ul class="nav-list">
+                    <li><a href="index.html#inicio">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="projetos.html" class="active" aria-current="page">Projetos</a></li>
+          <li><a href="impacto.html">Impacto</a></li>
+          <li class="dropdown">
+            <a href="#" class="drop-btn" role="button" aria-haspopup="true" aria-expanded="false" aria-controls="submenu-midia">Mídia <i class="fa-solid fa-chevron-down" aria-hidden="true"></i></a>
+            <ul class="dropdown-menu" id="submenu-midia">
+              <li><a href="galeria.html">Galeria</a></li>
+              <li><a href="midia.html">Multimídia</a></li>
+            </ul>
+          </li>
+          <li><a href="noticias.html">Notícias</a></li>
+          <li><a href="orcamento_hospedagem.html">Hospedagem</a></li>
+          <li><a href="acessibilidade.html">Acessibilidade</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <!-- HERO -->
+    <section class="page-hero" aria-labelledby="projetos-titulo">
+      <div class="container page-hero-content">
+        <span class="tag"> <span aria-hidden="true">♻</span> Projetos de sustentabilidade </span>
+
+        <h1 id="projetos-titulo">
+          Iniciativas que já mudam o destino do
+          <strong>lixo eletrônico.</strong>
+        </h1>
+
+        <p>
+          Programas de logística reversa, cooperativas de triagem, políticas
+          públicas e projetos de recondicionamento que atuam no Brasil. Use os
+          filtros para encontrar a frente que mais combina com o seu interesse.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#catalogo" class="btn btn-primary"> Explorar o catálogo </a>
+
+          <a href="#como-criar" class="btn btn-secondary"> Como criar o seu </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATÁLOGO -->
+    <section id="catalogo" class="section" aria-labelledby="catalogo-titulo">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-label"> Catálogo </span>
+
+          <h2 id="catalogo-titulo">Projetos e iniciativas mapeadas</h2>
+
+          <p>
+            Cada card reúne o tipo de atuação, o alcance e o link oficial da
+            iniciativa. Todos os endereços foram verificados na data de
+            publicação desta página.
+          </p>
+        </div>
+
+        <div class="filters" role="group" aria-label="Filtrar projetos por tipo de atuação">
+          <button type="button" class="filter-btn" data-filter="todos" aria-pressed="true"> Todos </button>
+          <button type="button" class="filter-btn" data-filter="logistica" aria-pressed="false"> Logística reversa </button>
+          <button type="button" class="filter-btn" data-filter="recondicionamento" aria-pressed="false">
+            Recondicionamento
+          </button>
+          <button type="button" class="filter-btn" data-filter="cooperativismo" aria-pressed="false">
+            Cooperativismo
+          </button>
+          <button type="button" class="filter-btn" data-filter="educacao" aria-pressed="false"> Educação </button>
+          <button type="button" class="filter-btn" data-filter="publico" aria-pressed="false"> Poder público </button>
+          <button type="button" class="filter-btn" data-filter="dados" aria-pressed="false"> Dados </button>
+        </div>
+
+        <p class="filter-status" id="filter-status" role="status" aria-live="polite">
+          9 iniciativas exibidas.
+        </p>
+
+        <div class="projects-grid" id="projects-grid">
+          <article class="project-card" data-categoria="logistica">
+            <div class="project-icon" aria-hidden="true"><i class="fa-solid fa-truck-fast"></i></div>
+            <span class="project-tag">Logística reversa</span>
+            <h3>ABREE — pontos de recebimento</h3>
+            <p>
+              Associação que reúne fabricantes e importadores para cumprir a
+              logística reversa de eletroeletrônicos e eletrodomésticos. O site
+              permite localizar pontos de recebimento por cidade.
+            </p>
+            <p class="project-meta">Alcance nacional · Indústria</p>
+            <a class="project-link" href="https://abree.org.br/pontos-de-recebimento" target="_blank"
+              rel="noopener noreferrer">
+              Encontrar um ponto <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+            </a>
+          </article>
+
+          <article class="project-card" data-categoria="logistica">
+            <div class="project-icon" aria-hidden="true"><i class="fa-solid fa-battery-full"></i></div>
+            <span class="project-tag">Logística reversa</span>
+            <h3>Green Eletron — PEVs</h3>
+            <p>
+              Gestora de logística reversa de eletroeletrônicos, pilhas e
+              baterias. Mantém Pontos de Entrega Voluntária fixos e móveis e
+              orienta quem quer se tornar um ponto de coleta.
+            </p>
+            <p class="project-meta">Alcance nacional · Gestão coletiva</p>
+            <a class="project-link" href="https://greeneletron.org.br/ponto-de-coleta/" target="_blank"
+              rel="noopener noreferrer">
+              Ver pontos de coleta <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+            </a>
+          </article>
+
+          <article class="project-card" data-categoria="cooperativismo">
+            <div class="project-icon" aria-hidden="true"><i class="fa-solid fa-people-carry-box"></i></div>
+            <span class="project-tag">Cooperativismo</span>
+            <h3>Coopermiti</h3>
+            <p>
+              Cooperativa sem fins lucrativos que atua como central de triagem de
+              resíduos eletroeletrônicos em São Paulo, gerando renda para os
+              cooperados e destinando o material à reciclagem.
+            </p>
+            <p class="project-meta">São Paulo (SP) · Geração de renda</p>
+            <a class="project-link" href="https://coopermiti.com.br/" target="_blank" rel="noopener noreferrer">
+              Conhecer a cooperativa <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+            </a>
+          </article>
+
+          <article class="project-card" data-categoria="recondicionamento">
+            <div class="project-icon" aria-hidden="true"><i class="fa-solid fa-computer"></i></div>
+            <span class="project-tag">Recondicionamento</span>
+            <h3>Computadores para Inclusão</h3>
+            <p>
+              Programa do Governo Federal que recebe equipamentos em desuso,
+              recondiciona em centros especializados e destina as máquinas a
+              pontos de inclusão digital, escolas e projetos sociais.
+            </p>
+            <p class="project-meta">Alcance nacional · Inclusão digital</p>
+            <a class="project-link"
+              href="https://www.gov.br/mcom/pt-br/acesso-a-informacao/acoes-e-programas/programas-projetos-acoes-obras-e-atividades/computadores-para-inclusao-1"
+              target="_blank" rel="noopener noreferrer">
+              Ver o programa <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+            </a>
+          </article>
+
+          <article class="project-card" data-categoria="logistica">
+            <div class="project-icon" aria-hidden="true"><i class="fa-solid fa-mobile-screen"></i></div>
+            <span class="project-tag">Logística reversa</span>
+            <h3>Samsung Recicla</h3>
+            <p>
+              Programa de uma fabricante que recebe produtos de pequeno e médio
+              porte em lojas e centros de serviço autorizados, além de campanhas
+              de troca com desconto na compra de um novo aparelho.
+            </p>
+            <p class="project-meta">Alcance nacional · Indústria</p>
+            <a class="project-link"
+              href="https://news.samsung.com/br/reciclagem-de-eletronicos-contribui-para-a-preservacao-do-meio-ambiente-saiba-como-adotar-essa-pratica"
+              target="_blank" rel="noopener noreferrer">
+              Entender o programa <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+            </a>
+          </article>
+
+          <article class="project-card" data-categoria="educacao">
+            <div class="project-icon" aria-hidden="true"><i class="fa-solid fa-chalkboard-user"></i></div>
+            <span class="project-tag">Educação</span>
+            <h3>Recicla Sampa</h3>
+            <p>
+              Portal com conteúdo educativo sobre reciclagem, mapas de ecopontos
+              e reportagens sobre iniciativas ambientais na cidade de São Paulo —
+              boa referência para trabalhos escolares.
+            </p>
+            <p class="project-meta">São Paulo (SP) · Conteúdo aberto</p>
+            <a class="project-link" href="https://www.reciclasampa.com.br/" target="_blank" rel="noopener noreferrer">
+              Acessar o portal <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+            </a>
+          </article>
+
+          <article class="project-card" data-categoria="publico">
+            <div class="project-icon" aria-hidden="true"><i class="fa-solid fa-city"></i></div>
+            <span class="project-tag">Poder público</span>
+            <h3>Ecopontos municipais</h3>
+            <p>
+              Pontos de entrega voluntária mantidos pelas prefeituras para
+              receber pequenos volumes de resíduos, incluindo eletrônicos. A
+              lista de endereços e os horários variam em cada município.
+            </p>
+            <p class="project-meta">Municipal · Gratuito</p>
+            <a class="project-link" href="https://sinir.gov.br/perfis/logistica-reversa/logistica-reversa/eletroeletronicos/"
+              target="_blank" rel="noopener noreferrer">
+              Consultar orientações <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+            </a>
+          </article>
+
+          <article class="project-card" data-categoria="publico">
+            <div class="project-icon" aria-hidden="true"><i class="fa-solid fa-scale-balanced"></i></div>
+            <span class="project-tag">Poder público</span>
+            <h3>Política Nacional de Resíduos Sólidos</h3>
+            <p>
+              A Lei 12.305/2010 criou a responsabilidade compartilhada pelo ciclo
+              de vida dos produtos, e o Decreto 10.240/2020 regulamentou a
+              logística reversa de eletroeletrônicos de uso doméstico.
+            </p>
+            <p class="project-meta">Nacional · Marco legal</p>
+            <a class="project-link" href="https://sinir.gov.br/perfis/logistica-reversa/logistica-reversa/eletroeletronicos/"
+              target="_blank" rel="noopener noreferrer">
+              Ver detalhes <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+            </a>
+          </article>
+
+          <article class="project-card" data-categoria="dados">
+            <div class="project-icon" aria-hidden="true"><i class="fa-solid fa-chart-simple"></i></div>
+            <span class="project-tag">Dados</span>
+            <h3>SINIR</h3>
+            <p>
+              Sistema Nacional de Informações sobre a Gestão dos Resíduos Sólidos:
+              reúne dados oficiais sobre geração, coleta e destinação de resíduos,
+              úteis para embasar pesquisas e relatórios.
+            </p>
+            <p class="project-meta">Nacional · Dados oficiais</p>
+            <a class="project-link" href="https://sinir.gov.br/" target="_blank" rel="noopener noreferrer">
+              Explorar os dados <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- POLÍTICA PÚBLICA -->
+    <section class="section policy" aria-labelledby="policy-titulo">
+      <div class="container">
+        <div class="policy-card">
+          <div>
+            <span class="section-label"> Contexto legal </span>
+
+            <h2 id="policy-titulo">Quem descarta também é responsável</h2>
+
+            <p>
+              A Política Nacional de Resíduos Sólidos estabeleceu a
+              responsabilidade compartilhada: fabricantes, importadores,
+              distribuidores, comerciantes, consumidores e poder público dividem
+              o dever de dar destino correto aos resíduos.
+            </p>
+
+            <p>
+              Na prática, isso significa que o consumidor deve entregar o
+              equipamento em um ponto de coleta, e a cadeia produtiva precisa
+              garantir que esse material volte para a reciclagem — não para
+              lixões.
+            </p>
+          </div>
+
+          <div class="policy-laws">
+            <div class="policy-law">
+              <strong>Lei 12.305/2010</strong>
+              <span>Institui a Política Nacional de Resíduos Sólidos e a responsabilidade compartilhada.</span>
+            </div>
+
+            <div class="policy-law">
+              <strong>Decreto 10.240/2020</strong>
+              <span>Regulamenta a logística reversa de eletroeletrônicos de uso doméstico.</span>
+            </div>
+
+            <div class="policy-law">
+              <strong>Consumo consciente</strong>
+              <span>Antes de descartar, avalie reparo, doação ou reutilização do equipamento.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMO CRIAR -->
+    <section id="como-criar" class="section" aria-labelledby="como-titulo">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-label"> Mão na massa </span>
+
+          <h2 id="como-titulo">Como criar um projeto na sua escola ou comunidade</h2>
+
+          <p>
+            Não é preciso uma estrutura grande para começar. Um ponto de coleta
+            organizado com parceria local já evita que equipamentos terminem no
+            lixo comum.
+          </p>
+        </div>
+
+        <div class="howto-grid">
+          <article class="howto-card">
+            <span class="howto-number"> PASSO 01 </span>
+            <h3>Escolha o foco</h3>
+            <p>
+              Defina o problema e o público: celulares e baterias, computadores
+              da escola ou eletrônicos de pequeno porte da comunidade.
+            </p>
+          </article>
+
+          <article class="howto-card">
+            <span class="howto-number"> PASSO 02 </span>
+            <h3>Faça um diagnóstico</h3>
+            <p>
+              Conte quantos equipamentos existem parados e descubra para onde as
+              pessoas descartam hoje. Números ajudam a convencer parceiros.
+            </p>
+          </article>
+
+          <article class="howto-card">
+            <span class="howto-number"> PASSO 03 </span>
+            <h3>Busque parcerias</h3>
+            <p>
+              Procure um ecoponto, uma cooperativa de catadores ou um ponto de
+              recebimento de fabricante para dar destino final ao material.
+            </p>
+          </article>
+
+          <article class="howto-card">
+            <span class="howto-number"> PASSO 04 </span>
+            <h3>Comunique bem</h3>
+            <p>
+              Crie cartazes, publicações e uma página simples explicando o que
+              pode ser entregue, onde e em que horário.
+            </p>
+          </article>
+
+          <article class="howto-card">
+            <span class="howto-number"> PASSO 05 </span>
+            <h3>Registre resultados</h3>
+            <p>
+              Anote quilos coletados, pessoas alcançadas e destinação dada.
+              Esses dados mostram o impacto e sustentam a continuidade.
+            </p>
+          </article>
+        </div>
+
+        <p class="howto-note">
+          <strong>Segurança em primeiro lugar:</strong> nunca abra baterias ou
+          equipamentos com carga residual, e transporte materiais cortantes ou
+          pesados com proteção adequada. Em caso de dúvida, entregue o item
+          intacto em um ponto de coleta.
+        </p>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+      <div class="container cta-content">
+        <div>
+          <span class="section-label"> Faça parte da mudança </span>
+
+          <h2>Já sabe onde descartar? Então falta pouco.</h2>
+        </div>
+
+        <a href="index.html#descarte" class="btn btn-light"> Ver o passo a passo </a>
+      </div>
+    </section>
+
+    <a href="https://wa.me/5511999999999" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
+      aria-label="Entre em contato com a EcoTech pelo WhatsApp" title="Fale conosco pelo WhatsApp">
+      <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+    </a>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer id="contato" class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <span class="logo-icon" aria-hidden="true">♻</span>
+          <span>Eco<span>Tech</span></span>
+        </a>
+
+        <p>Informação e conscientização para um futuro mais sustentável.</p>
+      </div>
+
+      <div class="footer-column">
+        <h2>Navegação</h2>
+
+        <ul class="footer-links-list">
+  <li><a href="index.html#inicio">Início</a></li>
+  <li><a href="sobre.html">Sobre</a></li>
+  <li><a href="projetos.html" aria-current="page">Projetos</a></li>
+  <li><a href="impacto.html">Impacto</a></li>
+  <li><a href="midia.html">Mídia</a></li>
+  <li><a href="galeria.html">Galeria</a></li>
+  <li><a href="midia.html">Multimídia</a></li>
+  <li><a href="noticias.html">Notícias</a></li>
+  <li><a href="orcamento_hospedagem.html">Hospedagem</a></li>
+  <li><a href="acessibilidade.html">Acessibilidade</a></li>
+  <li><a href="contato.html">Contato</a></li>
+</ul>
+      </div>
+
+      <div class="footer-column">
+        <h2>Projeto</h2>
+
+        <p>
+          Projeto acadêmico desenvolvido para a disciplina de Desenvolvimento
+          Web.
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2026 EcoTech. Projeto acadêmico.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="funcionalidades/index.js"></script>
+  <script src="funcionalidades/projetos.js"></script>
+    <!-- Início do código do VLibras -->
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget("https://vlibras.gov.br/app");
+    </script>
+    <!-- Fim do código do VLibras -->
+</body>
+
+</html>
