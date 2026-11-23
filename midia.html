@@ -28,7 +28,7 @@
                 <span>Eco<span>Tech</span></span>
             </a>
 
-            <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false"
+            <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false"
                 aria-controls="menu-principal">
                 <span></span>
                 <span></span>
@@ -245,6 +245,7 @@
                     botaoMidia.setAttribute('aria-expanded', 'false');
                     botaoMidia.addEventListener('click', function (evento) {
                         evento.preventDefault();
+                        evento.stopPropagation();
                         const item = botaoMidia.closest('.dropdown');
                         const aberto = item.classList.toggle('is-open');
                         botaoMidia.setAttribute('aria-expanded', String(aberto));
