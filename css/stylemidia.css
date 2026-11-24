@@ -91,230 +91,6 @@ button:focus-visible {
   margin: 0 auto;
 }
 
-/* =========================================
-   HEADER
-========================================= */
-
-
-/* ===== HEADER ===== */
-
-/* ===== CABEÇALHO ECOTECH ===== */
-.header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background-color: var(--dark-blue);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.header-content {
-  position: relative;
-  min-height: 78px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-}
-
-/* Logo à esquerda */
-.header-content > .logo {
-  display: inline-flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 10px;
-  margin: 0 auto 0 0;
-  flex: 0 0 auto;
-  color: var(--white);
-  font-size: 1.4rem;
-  font-weight: 800;
-  text-decoration: none;
-}
-
-.logo > span:last-child > span {
-  color: var(--green);
-}
-
-.logo-icon {
-  width: 38px;
-  height: 38px;
-  display: grid;
-  place-items: center;
-  flex-shrink: 0;
-  border-radius: 50%;
-  background-color: var(--green);
-  color: var(--dark-blue);
-  font-size: 1.4rem;
-}
-
-/* Navegação desktop */
-.navigation {
-  display: block;
-  margin-left: auto;
-}
-
-.nav-list {
-  display: flex;
-  align-items: center;
-  gap: 28px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.nav-list a {
-  position: relative;
-  display: inline-block;
-  color: #dbe8e3;
-  font-size: 0.95rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.nav-list a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -8px;
-  width: 0;
-  height: 2px;
-  background-color: var(--green);
-  transition: width 0.2s ease;
-}
-
-.nav-list a:hover,
-.nav-list a.active {
-  color: var(--white);
-}
-
-.nav-list a:hover::after,
-.nav-list a.active::after {
-  width: 100%;
-}
-
-/* Botão hambúrguer */
-.menu-toggle {
-  display: none;
-  width: 44px;
-  height: 44px;
-  padding: 9px;
-  margin: 0 0 0 auto;
-  flex: 0 0 44px;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 8px;
-  background: transparent;
-  color: var(--green);
-  cursor: pointer;
-}
-
-.menu-toggle span {
-  display: block;
-  width: 22px;
-  height: 2px;
-  margin: 0;
-  border-radius: 2px;
-  background-color: currentColor;
-  transition: transform 0.25s ease, opacity 0.25s ease;
-}
-
-/* ===== MOBILE ===== */
-@media (max-width: 768px) {
-  .header-content {
-    min-height: 70px;
-    flex-direction: row !important;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-
-  .header-content > .logo {
-    margin: 0 auto 0 0 !important;
-    align-self: center;
-    font-size: 1.3rem;
-  }
-
-  .logo-icon {
-    width: 34px;
-    height: 34px;
-    font-size: 1.2rem;
-  }
-
-  .menu-toggle {
-    display: flex !important;
-    margin: 0 0 0 auto !important;
-    align-self: center;
-    position: relative;
-    z-index: 2;
-  }
-
-  /* Menu dropdown */
-  .header-content > .navigation {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    width: 100%;
-    margin: 0;
-    padding: 12px 20px 20px;
-    background-color: var(--dark-blue);
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
-  }
-
-  .header-content > .navigation.is-open {
-    display: block !important;
-  }
-
-  .nav-list {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 4px;
-  }
-
-  .nav-list li {
-    width: 100%;
-  }
-
-  .nav-list a {
-    display: block;
-    padding: 13px 10px;
-  }
-
-  .nav-list a::after {
-    bottom: 5px;
-    left: 10px;
-    max-width: calc(100% - 20px);
-  }
-
-  .nav-list a:hover,
-  .nav-list a.active {
-    color: var(--green);
-  }
-
-  /* Hambúrguer vira X quando aberto */
-  .menu-toggle[aria-expanded="true"] span:nth-child(1) {
-    transform: translateY(7px) rotate(45deg);
-  }
-
-  .menu-toggle[aria-expanded="true"] span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .menu-toggle[aria-expanded="true"] span:nth-child(3) {
-    transform: translateY(-7px) rotate(-45deg);
-  }
-}
-
-
 
 
 
@@ -938,22 +714,6 @@ button:focus-visible {
 /* TABLET */
 
 @media (max-width: 900px) {
-  .header-content {
-    flex-direction: column;
-
-    justify-content: center;
-
-    padding: 18px 0;
-  }
-
-  .nav-list {
-    gap: 18px;
-
-    flex-wrap: wrap;
-
-    justify-content: center;
-  }
-
   .hero-content {
     grid-template-columns: 1fr;
 
@@ -992,17 +752,7 @@ button:focus-visible {
 /* MOBILE */
 
 @media (max-width: 600px) {
-  .header-content {
-    align-items: center;
-  }
-
-  .nav-list {
-    gap: 12px 18px;
-  }
-
-  .nav-list a {
-    font-size: 0.85rem;
-  }
+  
 
   .hero-content {
     padding: 65px 0;
@@ -1301,13 +1051,6 @@ button:focus-visible {
     font-size: 2.25rem;
   }
 
-  .nav-list {
-    gap: 8px 12px;
-  }
-
-  .nav-list a {
-    font-size: 0.78rem;
-  }
 }
 
 /* REDUÇÃO DE MOVIMENTO */
@@ -1323,71 +1066,8 @@ button:focus-visible {
     transition: none !important;
   }
 }
-/* --- ESTILOS DO MENU DROPDOWN DE MÍDIA --- */
 
-/* Posicionamento relativo para o item pai do menu */
-.nav-list .dropdown {
-    position: relative;
-}
 
-/* O sub-menu (fica escondido por padrão) */
-.nav-list .dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #ffffff;
-    min-width: 160px;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-    list-style: none;
-    padding: 8px 0;
-    z-index: 999;
-    border: 1px solid #E5E7EB;
-}
-
-/* Mostra o sub-menu ao passar o mouse APENAS no computador */
-@media (min-width: 1101px) {
-    .nav-list .dropdown:hover .dropdown-menu {
-        display: block;
-    }
-}
-
-/* Abre e fecha o sub-menu pelo clique/toque no celular e tablet */
-.nav-list .dropdown.is-open .dropdown-menu {
-    display: block;
-}
-
-/* Estilo dos links dentro do sub-menu */
-.nav-list .dropdown-menu li {
-    display: block;
-    margin: 0;
-}
-
-.nav-list .dropdown-menu li a {
-    color: #166534 !important;
-    padding: 10px 20px;
-    display: block;
-    white-space: nowrap;
-    font-size: 0.95rem;
-    font-weight: 600;
-    text-decoration: none;
-    transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-/* Remove a linha verde de Galeria e Multimídia */
-.nav-list .dropdown-menu li a::after,
-.nav-list .dropdown-menu li a:hover::after {
-    display: none !important;
-    content: none !important;
-    width: 0 !important;
-}
-
-/* Efeito ao passar o mouse nas opções do sub-menu */
-.nav-list .dropdown-menu li a:hover {
-    background-color: #F3F4F6;
-    color: var(--green-dark) !important;
-}
 
 .video-container {
     position: relative;
@@ -1406,6 +1086,7 @@ button:focus-visible {
     height: 100%;
     border-radius: 10px;
 }
+
 /* --- AJUSTES PARA DISPOSITIVOS MÓVEIS (CELULARES) --- */
 @media (max-width: 768px) {
     /* Reduz o padding excessivo dos cards nas telas pequenas */
@@ -1449,101 +1130,10 @@ button:focus-visible {
         margin: 10px 0;
     }
 
-    /* Ajusta o espaçamento do menu aberto no celular */
-    .header-content > .navigation.is-open {
-        padding: 15px 20px 25px;
-    }
-
-    .nav-list .dropdown-menu {
-        position: static;
-        box-shadow: none;
-        border: none;
-        background-color: rgba(0, 0, 0, 0.15);
-        margin-top: 8px;
-        border-radius: 6px;
-    }
-
-    .nav-list .dropdown-menu li a {
-        color: var(--white) !important;
-        padding: 8px 15px;
-    }
-}
-/* --- CORREÇÃO DEFINITIVA DO MENU HAMBÚRGUER MOBILE (IDÊNTICO AO STYLE.CSS) --- */
-@media (max-width: 768px) {
-    .header-content > .navigation.is-open {
-        display: block !important;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        width: 100%;
-        margin: 0;
-        padding: 15px 20px 25px;
-        background-color: var(--dark-blue);
-        border-top: 1px solid rgba(255, 255, 255, 0.08);
-        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
-        z-index: 999;
-    }
-
-    /* Garante que a lista fique vertical */
-    .header-content > .navigation.is-open .nav-list {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: stretch !important;
-        gap: 4px !important;
-    }
-
-    .header-content > .navigation.is-open .nav-list li {
-        width: 100%;
-    }
-
-    .header-content > .navigation.is-open .nav-list > li > a,
-    .header-content > .navigation.is-open .nav-list > li.dropdown > .drop-btn {
-        display: block;
-        padding: 12px 10px;
-    }
-
-    /* Submenu Mídia idêntico ao style.css no celular */
-    .header-content > .navigation.is-open .nav-list .dropdown-menu {
-        position: static;
-        box-shadow: none;
-        border: none;
-        background-color: rgba(0, 0, 0, 0.18);
-        margin-top: 4px;
-        border-radius: 6px;
-        padding: 8px 0;
-    }
-
-    .header-content > .navigation.is-open .nav-list .dropdown-menu li a {
-        color: var(--white);
-        padding: 10px 18px;
-    }
-
-    .header-content > .navigation.is-open .nav-list .dropdown-menu li a:hover {
-        background-color: rgba(255, 255, 255, 0.08);
-        color: var(--green);
-    }
+    
 }
 
-    /* Garante que a lista fique empilhada verticalmente */
-    .header-content > .navigation.is-open .nav-list {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: flex-start !important;
-        gap: 12px;
-        width: 100%;
-    }
 
-    .header-content > .navigation.is-open .nav-list li {
-        width: 100%;
-    }
-
-    .header-content > .navigation.is-open .nav-list a {
-        display: block;
-        width: 100%;
-        padding: 8px 0;
-    }
-}
 /* --- AJUSTE DE VÍDEO PARA TELAS MUITO PEQUENAS (EX: IPHONE 5 / SE) --- */
 @media (max-width: 380px) {
     .video-container {

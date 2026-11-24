@@ -1,65 +1,3 @@
-/* =========================================
-   RESET (usado pelo header)
-========================================= */
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-ul {
-  list-style: none;
-}
-
-/* =========================================
-   VARIÁVEIS (usadas pelo header)
-========================================= */
-
-:root {
-  --dark-blue: #082b3a;
-  --green: #20b26b;
-  --white: #ffffff;
-  --container: 1180px;
-}
-
-/* =========================================
-   ACESSIBILIDADE BASE (opcional, vem antes do header)
-========================================= */
-
-.skip-link {
-  position: absolute;
-  top: -100px;
-  left: 20px;
-  z-index: 9999;
-  background-color: var(--dark-blue);
-  color: var(--white);
-  padding: 12px 18px;
-  border-radius: 6px;
-  font-weight: 700;
-}
-
-.skip-link:focus {
-  top: 15px;
-}
-
-/* =========================================
-   CONTAINER
-========================================= */
-
-.container {
-  width: min(92%, var(--container));
-  margin: 0 auto;
-}
-
-/* =========================================
-   HEADER E NAVEGAÇÃO
-========================================= */
 
 .header {
   position: sticky;
@@ -150,7 +88,7 @@ ul {
   width: 100%;
 }
 
-/* Submenus (Sobre e Mídias) */
+/* Submenu Mídia */
 .nav-list .dropdown {
   position: relative;
 }
@@ -225,10 +163,6 @@ ul {
   background-color: currentColor;
   transition: transform 0.25s ease, opacity 0.25s ease;
 }
-
-/* =========================================
-   RESPONSIVIDADE DO HEADER
-========================================= */
 
 @media (max-width: 768px) {
   .header-content {
