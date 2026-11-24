@@ -1,7 +1,7 @@
 ﻿<!doctype html>
 <html lang="pt-BR">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8"/>
     <meta name="author" content="EcoTech" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="keywords" content="reciclagem, lixo eletrônico, sustentabilidade, eletrônicos, descarte correto" />
@@ -440,17 +440,15 @@
     <script src="funcionalidades/acessibilidade.js"></script>
 
     <!-- VLibras -->
-    <div vw class="enabled">
-      <div vw-access-button class="active"></div>
-      <div vw-plugin-wrapper>
+    <div class="enabled">
+      <div class="active"></div>
+      <div>
         <div class="vw-plugin-top-wrapper"></div>
       </div>
     </div>
 
+    <script src="js/header.js" defer></script>
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-    <script>
-      new window.VLibras.Widget("https://vlibras.gov.br/app");
-    </script>
-     <script src="js/header.js" defer></script>
+    <script> new window.VLibras.Widget("https://vlibras.gov.br/app") </script>
   </body>
 </html>
