@@ -16,30 +16,75 @@
 <body class="whatsapp-standard">
   <a href="#conteudo" class="skip-link">Pular para o conteúdo principal</a>
   <header class="header">
-    <div class="container header-content">
-      <a href="index.html" class="logo" aria-label="EcoTech - Página inicial"><span class="logo-icon" aria-hidden="true">♻</span><span>Eco<span>Tech</span></span></a>
-      <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal"><span></span><span></span><span></span></button>
+      <div class="container header-content">
+        <a href="index.html" class="logo" aria-label="EcoTech - Página inicial">
+          <span class="logo-icon" aria-hidden="true">♻</span>
+          <span>Eco<span>Tech</span></span>
+        </a>
+
+      <button
+        class="menu-toggle"
+        id="menu-toggle"
+        type="button"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+        aria-controls="menu-principal"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
       <nav id="menu-principal" class="navigation" aria-label="Navegação principal">
         <ul class="nav-list">
-                    <li><a href="index.html#inicio">Início</a></li>
-          <li><a href="sobre.html">Sobre</a></li>
-          <li><a href="projetos.html">Projetos</a></li>
-          <li><a href="impacto.html">Impacto</a></li>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="acessibilidade.html">Acessibilidade</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="orcamento_hospedagem.html">Hospedagem</a></li>
+
           <li class="dropdown">
-            <a href="#" class="drop-btn" role="button" aria-haspopup="true" aria-expanded="false" aria-controls="submenu-midia">Mídia <i class="fa-solid fa-chevron-down" aria-hidden="true"></i></a>
+            <a
+              href="#"
+              class="drop-btn"
+              role="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+              aria-controls="submenu-sobre"
+            >
+              Sobre
+              <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+            </a>
+
+            <ul class="dropdown-menu" id="submenu-sobre">
+              <li><a href="sobre.html">Sobre nós</a></li>
+              <li><a href="impacto.html">Impacto</a></li>
+              <li><a href="projetos.html">Projetos</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a
+              href="#"
+              class="drop-btn"
+              role="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+              aria-controls="submenu-midia"
+            >
+              Mídias
+              <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+            </a>
+
             <ul class="dropdown-menu" id="submenu-midia">
+              <li><a href="noticias.html">Notícias</a></li>
               <li><a href="galeria.html">Galeria</a></li>
               <li><a href="midia.html">Multimídia</a></li>
             </ul>
           </li>
-          <li><a href="noticias.html" class="active" aria-current="page">Notícias</a></li>
-          <li><a href="orcamento_hospedagem.html">Hospedagem</a></li>
-          <li><a href="acessibilidade.html">Acessibilidade</a></li>
-          <li><a href="contato.html">Contato</a></li>
         </ul>
       </nav>
-    </div>
-  </header>
+      </div>
+    </header>
 
   <main id="conteudo">
     <section class="page-hero" aria-labelledby="page-title">
@@ -136,5 +181,6 @@
       new window.VLibras.Widget("https://vlibras.gov.br/app");
     </script>
     <!-- Fim do código do VLibras -->
+     <script src="js/header.js" defer></script>
 </body>
 </html>
