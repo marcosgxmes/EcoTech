@@ -545,29 +545,12 @@
         document.getElementById("lightboxModal").classList.remove("active");
       }
     </script>
+    
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        const menuToggle = document.querySelector(".menu-toggle");
         const navigation = document.querySelector(".navigation");
 
-        if (menuToggle && navigation) {
-          menuToggle.addEventListener("click", function (e) {
-            e.stopPropagation();
-            navigation.classList.toggle("is-open");
-            const isOpen = navigation.classList.contains("is-open");
-            menuToggle.setAttribute("aria-expanded", isOpen);
-          });
-
-          // Fecha o menu se clicar fora dele no celular
-          document.addEventListener("click", function (event) {
-            if (
-              !navigation.contains(event.target) &&
-              !menuToggle.contains(event.target)
-            ) {
-              navigation.classList.remove("is-open");
-              menuToggle.setAttribute("aria-expanded", "false");
-            }
-          });
+        if ( navigation) {          
 
           // Submenu "Mídia": abre com toque/clique
           const botaoMidia = document.querySelector(".drop-btn");
@@ -585,6 +568,7 @@
         }
       });
     </script>
+    
     <!-- Início do código do VLibras -->
     <div vw class="enabled">
       <div vw-access-button class="active"></div>
