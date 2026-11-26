@@ -1,23 +1,31 @@
 ﻿<!doctype html>
 <html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Fale com a EcoTech, conheça a equipe e envie uma mensagem sobre sustentabilidade e reciclagem eletrônica." />
-  <meta name="author" content="EcoTech" />
-  <meta name="theme-color" content="#082b3a" />
-  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Conheça a história, a missão, a visão e os valores da EcoTech, projeto acadêmico de conscientização sobre o descarte correto de resíduos eletrônicos.">
+  <meta name="keywords" content="EcoTech, projeto acadêmico, lixo eletrônico, sustentabilidade, missão, visão, valores">
+  <meta name="author" content="EcoTech">
 
-  <link rel="stylesheet" href="css/menu.css" />
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  
   <link rel="stylesheet" href="css/header.css">
-  <link rel="stylesheet" href="css/index.css" />
-  <link rel="stylesheet" href="css/contato.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
-
-  <title>Contato e equipe | EcoTech</title>
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/paginas.css">
+  <link rel="stylesheet" href="css/sobre.css">
+  <link rel="stylesheet" href="css/menu.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  
+  <title>Sobre a EcoTech - História, missão, visão e valores</title>
   </head>
+
 <body class="whatsapp-standard">
-  <a href="#conteudo" class="skip-link">Pular para o conteúdo principal</a>
+  <!-- Link para facilitar a navegação por teclado -->
+  <a href="#conteudo" class="skip-link"> Pular para o conteúdo principal </a>
+
+  <!-- CABEÇALHO -->
   <header class="header">
       <div class="container header-content">
         <a href="index.html" class="logo" aria-label="EcoTech - Página inicial">
@@ -90,52 +98,348 @@
     </header>
 
   <main id="conteudo">
-    <section class="page-hero" aria-labelledby="page-title"><div class="container page-hero-inner"><span class="page-kicker">Fale com a EcoTech</span><h1 id="page-title">Vamos conversar<strong>?</strong></h1><p>Tem uma dúvida, uma ideia ou quer fazer parceria? Envie uma mensagem. A equipe EcoTech está pronta para ouvir.</p><a href="#formulario">Envie sua mensagem <span aria-hidden="true">↓</span></a></div><div class="hero-mark" aria-hidden="true">♻</div></section>
+    <!-- HERO DA PÁGINA -->
+    <section class="page-hero" aria-labelledby="sobre-titulo">
+      <div class="container page-hero-content">
+        <span class="tag"> <span aria-hidden="true">♻</span> Sobre o projeto </span>
 
-    <div class="section contact-section">
-      <div class="container contact-layout">
-        <aside class="contact-aside">
-          <span class="page-kicker">Estamos por aqui</span><h2 id="contact-title">Um contato pode iniciar uma boa mudança.</h2>
-          <p class="contact-copy">Use os canais abaixo ou conte um pouco mais pelo formulário. Os canais de contato exibidos são demonstrativos; os nomes da equipe abaixo são dos desenvolvedores.</p>
-          <div class="contact-details">
-            <div class="contact-detail"><span class="contact-icon" aria-hidden="true">@</span><div><span class="contact-label">E-mail</span><a href="mailto:contato@ecotech.org.br">contato@ecotech.org.br</a></div></div>
-            <div class="contact-detail"><span class="contact-icon" aria-hidden="true">↗</span><div><span class="contact-label">Telefone</span><a href="tel:+551134567890">(11) 3456-7890</a></div></div>
-            <div class="contact-detail"><span class="contact-icon" aria-hidden="true">⌖</span><div><span class="contact-label">Localização</span><span>São Paulo, SP</span></div></div>
-            <div class="contact-detail"><span class="contact-icon" aria-hidden="true">◷</span><div><span class="contact-label">Atendimento</span><span>Segunda a sexta, das 9h às 17h</span></div></div>
-          </div>
-          <p class="contact-note">Seu próximo eletrônico pode ter um destino melhor. Pergunte à equipe sobre descarte e pontos de coleta.</p>
-        </aside>
+        <h1 id="sobre-titulo">
+          Tecnologia com propósito para mudar o destino do
+          <strong>lixo eletrônico.</strong>
+        </h1>
 
-        <section class="form-panel" id="formulario" aria-labelledby="form-title">
-          <div class="form-heading"><span class="page-kicker">Mande sua mensagem</span><h2 id="form-title">Como podemos ajudar?</h2><p>Os campos com <span class="required-mark" aria-hidden="true">*</span> são obrigatórios.</p></div>
-          <form id="contact-form">
-            <div class="form-grid">
-              <div class="form-field field-full"><label for="name">Nome completo <span class="required-mark" aria-hidden="true">*</span></label><input id="name" name="name" type="text" autocomplete="name" minlength="2" maxlength="80" pattern="[A-Za-zÀ-ÖØ-öø-ÿÇç' .\-]{2,80}" title="Use de 2 a 80 letras e pontuação comum." required /></div>
-              <div class="form-field"><label for="email">E-mail <span class="required-mark" aria-hidden="true">*</span></label><input id="email" name="email" type="email" autocomplete="email" maxlength="254" placeholder="voce@exemplo.com" required /></div>
-              <div class="form-field"><label for="phone">Telefone com DDD <span class="required-mark" aria-hidden="true">*</span></label><input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" pattern="\+?[0-9\(\) .\-]{9,19}" title="Informe o telefone com DDD." placeholder="(11) 99999-0000" required /></div>
-              <div class="form-field"><label for="contactDate">Data preferida para contato <span class="required-mark" aria-hidden="true">*</span></label><input id="contactDate" name="contactDate" type="date" required /></div>
-              <div class="form-field"><label for="equipmentCount">Quantidade de equipamentos <span class="required-mark" aria-hidden="true">*</span></label><input id="equipmentCount" name="equipmentCount" type="number" min="1" max="99" step="1" inputmode="numeric" required /></div>
-              <div class="form-field field-full"><label for="subject">Assunto <span class="required-mark" aria-hidden="true">*</span></label><select id="subject" name="subject" required><option value="">Selecione um assunto</option><option value="Descarte eletrônico">Descarte eletrônico</option><option value="Parcerias">Parcerias</option><option value="Dúvida sobre o projeto">Dúvida sobre o projeto</option><option value="Outro">Outro</option></select></div>
-              <div class="form-field field-full"><label for="message">Mensagem <span class="required-mark" aria-hidden="true">*</span></label><textarea id="message" name="message" rows="5" minlength="20" maxlength="2000" placeholder="Conte como podemos ajudar (mínimo de 20 caracteres)." required></textarea><span class="field-hint">Até 2.000 caracteres.</span></div>
-              <div class="form-field field-full consent-field"><input id="consent" name="consent" type="checkbox" value="Sim" required /><label for="consent">Autorizo o uso dos dados informados para que a equipe EcoTech responda à minha mensagem. <span class="required-mark" aria-hidden="true">*</span></label></div>
-              <div class="form-field field-full"><button class="btn btn-primary" type="submit">Enviar mensagem <span aria-hidden="true">→</span></button><p class="privacy-note">Ao enviar, seus dados serão encaminhados ao e-mail da equipe EcoTech para resposta. Não inclua informações sensíveis.</p></div>
-            </div>
-            <p class="form-status" id="form-status" role="status" aria-live="polite" tabindex="-1" hidden></p>
-          </form>
-        </section>
+        <p>
+          A EcoTech nasceu em uma sala de aula, a partir de uma pergunta simples:
+          para onde vai o equipamento eletrônico que deixamos de usar? Desde
+          então, o projeto se tornou uma plataforma de informação, conscientização
+          e incentivo ao descarte correto.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#historia" class="btn btn-primary"> Conheça nossa história </a>
+
+          <a href="index.html#descarte" class="btn btn-secondary">
+            Saiba como descartar
+          </a>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <section class="section team-section" aria-labelledby="team-title"><div class="container"><div class="team-heading"><div><span class="page-kicker">Gente que acredita na mudança</span><h2 id="team-title">Quem faz a EcoTech.</h2></div><p>Uma equipe dedicada a aproximar tecnologia, informação e cuidado com o planeta.</p></div><div class="team-grid"><article class="team-card"><span class="team-avatar avatar-green" aria-hidden="true">EJ</span><div><h3>Eugênio Júnior</h3><p>Desenvolvedor do projeto</p></div></article><article class="team-card"><span class="team-avatar avatar-blue" aria-hidden="true">MG</span><div><h3>Marcos Gomes</h3><p>Desenvolvedor do projeto</p></div></article><article class="team-card"><span class="team-avatar avatar-lime" aria-hidden="true">VA</span><div><h3>Vinicius Alex</h3><p>Desenvolvedor do projeto</p></div></article><article class="team-card"><span class="team-avatar avatar-green" aria-hidden="true">CA</span><div><h3>Cesar Augusto</h3><p>Desenvolvedor do projeto</p></div></article><article class="team-card"><span class="team-avatar avatar-blue" aria-hidden="true">JV</span><div><h3>João Vitor</h3><p>Desenvolvedor do projeto</p></div></article></div><p class="team-disclaimer">Equipe de desenvolvimento da EcoTech.</p></div></section>
+    <!-- INDICADORES -->
+    <section class="stats" aria-labelledby="stats-title">
+      <div class="container">
+        <h2 id="stats-title">Indicadores sobre lixo eletrônico</h2>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <strong>62 mi</strong>
+            <span>de toneladas de lixo eletrônico geradas no mundo em 2022</span>
+          </div>
+
+          <div class="stat-card">
+            <strong>22,3%</strong>
+            <span>desse total foi documentado como coletado e reciclado corretamente</span>
+          </div>
+
+          <div class="stat-card">
+            <strong>82 mi</strong>
+            <span>de toneladas é a projeção de geração de resíduos eletrônicos para 2030</span>
+          </div>
+        </div>
+
+        <p class="source-note">
+          Fonte:
+          <a href="https://ewastemonitor.info/the-global-e-waste-monitor-2024/" target="_blank"
+            rel="noopener noreferrer">Global E-waste Monitor 2024 (ONU/UNITAR)</a>.
+          Dados usados como referência para a pesquisa do projeto.
+        </p>
+      </div>
+    </section>
+
+    <!-- HISTÓRIA -->
+    <section id="historia" class="section" aria-labelledby="historia-titulo">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-label"> Nossa história </span>
+
+          <h2 id="historia-titulo">
+            Da disciplina de Desenvolvimento Web para uma causa ambiental
+          </h2>
+
+          <p>
+            O EcoTech é um projeto acadêmico da disciplina de Desenvolvimento Web,
+            com o tema Sustentabilidade e Impacto Social. Cada etapa foi pensada
+            para unir conteúdo confiável e uma experiência de navegação simples.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item">
+            <span class="timeline-marker" aria-hidden="true">01</span>
+
+            <div class="timeline-card">
+              <h3>O ponto de partida</h3>
+              <p>
+                O projeto começou como um trabalho de disciplina, a partir da
+                escolha do tema Sustentabilidade e Impacto Social. O lixo
+                eletrônico foi selecionado por ser um assunto presente no
+                cotidiano, mas ainda pouco discutido nas escolas e nas famílias.
+              </p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <span class="timeline-marker" aria-hidden="true">02</span>
+
+            <div class="timeline-card">
+              <h3>Pesquisa e contexto</h3>
+              <p>
+                Antes da primeira linha de código, reunimos referências sobre
+                geração, coleta e reciclagem de resíduos eletrônicos, além de
+                dados sobre mineração urbana, contaminação do solo e da água e o
+                impacto social do descarte irregular.
+              </p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <span class="timeline-marker" aria-hidden="true">03</span>
+
+            <div class="timeline-card">
+              <h3>Construção da plataforma</h3>
+              <p>
+                Definimos a identidade visual — verde para a natureza, azul escuro
+                para a tecnologia —, a arquitetura de informação e as páginas do
+                site, sempre com atenção ao design responsivo, ao HTML5 semântico
+                e aos recursos de acessibilidade.
+              </p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <span class="timeline-marker" aria-hidden="true">04</span>
+
+            <div class="timeline-card">
+              <h3>Hoje e próximos passos</h3>
+              <p>
+                A EcoTech reúne conteúdo informativo, galeria de imagens e uma
+                biblioteca multimídia com vídeo e podcast. O projeto segue em
+                evolução, com novas páginas, indicadores de impacto e formulário
+                de contato no horizonte.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- MISSÃO E VISÃO -->
+    <section id="missao" class="section mvv" aria-labelledby="missao-titulo">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-label"> Propósito </span>
+
+          <h2 id="missao-titulo">Missão e visão</h2>
+
+          <p>
+            Duas ideias orientam todas as decisões do projeto: o que queremos
+            transformar agora e o cenário que desejamos ajudar a construir.
+          </p>
+        </div>
+
+        <div class="mvv-grid">
+          <article class="mvv-card mvv-card--mission">
+            <div class="card-icon" aria-hidden="true">
+              <i class="fa-solid fa-bullseye"></i>
+            </div>
+
+            <h3>Missão</h3>
+
+            <p>
+              Informar e conscientizar as pessoas sobre o descarte correto de
+              resíduos eletrônicos, mostrando que a tecnologia pode ser uma
+              aliada da sustentabilidade e do impacto social positivo.
+            </p>
+          </article>
+
+          <article class="mvv-card mvv-card--vision">
+            <div class="card-icon" aria-hidden="true">
+              <i class="fa-solid fa-binoculars"></i>
+            </div>
+
+            <h3>Visão</h3>
+
+            <p>
+              Ser uma referência acessível de informação ambiental, contribuindo
+              para que a reutilização e a reciclagem de equipamentos eletrônicos
+              se tornem parte da rotina das pessoas.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- VALORES -->
+    <section id="valores" class="section" aria-labelledby="valores-titulo">
+      <div class="container">
+        <div class="section-heading center">
+          <span class="section-label"> Valores </span>
+
+          <h2 id="valores-titulo">O que guia o nosso trabalho</h2>
+
+          <p>
+            Princípios que aparecem tanto no conteúdo publicado quanto nas
+            escolhas de design e de código do projeto.
+          </p>
+        </div>
+
+        <div class="values-grid">
+          <article class="value-card">
+            <i class="fa-solid fa-leaf" aria-hidden="true"></i>
+            <h3>Conscientização ambiental</h3>
+            <p>
+              Informação clara é o primeiro passo para transformar hábitos de
+              consumo, reutilização e descarte.
+            </p>
+          </article>
+
+          <article class="value-card">
+            <i class="fa-solid fa-universal-access" aria-hidden="true"></i>
+            <h3>Acessibilidade</h3>
+            <p>
+              Navegação por teclado, contraste adequado, textos alternativos e
+              respeito à preferência de redução de movimento.
+            </p>
+          </article>
+
+          <article class="value-card">
+            <i class="fa-solid fa-compass" aria-hidden="true"></i>
+            <h3>Simplicidade</h3>
+            <p>
+              Uma experiência direta e responsiva, sem excesso de elementos, para
+              que o conteúdo seja o destaque.
+            </p>
+          </article>
+
+          <article class="value-card">
+            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+            <h3>Transparência</h3>
+            <p>
+              Dados e referências identificados ao longo do site, para que o
+              leitor possa verificar aquilo que lê.
+            </p>
+          </article>
+
+          <article class="value-card">
+            <i class="fa-solid fa-people-group" aria-hidden="true"></i>
+            <h3>Colaboração</h3>
+            <p>
+              Um projeto construído em equipe, unindo pesquisa, redação, design e
+              desenvolvimento.
+            </p>
+          </article>
+
+          <article class="value-card">
+            <i class="fa-solid fa-microchip" aria-hidden="true"></i>
+            <h3>Tecnologia com propósito</h3>
+            <p>
+              Usar recursos digitais para apoiar soluções de problemas reais da
+              sociedade.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EQUIPE -->
+    <section id="equipe" class="section team" aria-labelledby="equipe-titulo">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-label"> Equipe </span>
+
+          <h2 id="equipe-titulo">Quem desenvolve o EcoTech</h2>
+
+          <p>
+            Projeto desenvolvido por estudantes para a disciplina de
+            Desenvolvimento Web, com foco em sustentabilidade e impacto social.
+          </p>
+        </div>
+
+        <div class="team-grid">
+          <article class="team-card">
+            <span class="team-avatar" aria-hidden="true">MG</span>
+            <h3>Marcos Gomes</h3>
+            <p>Integrante do projeto</p>
+          </article>
+
+          <article class="team-card">
+            <span class="team-avatar" aria-hidden="true">CA</span>
+            <h3>César Augusto</h3>
+            <p>Integrante do projeto</p>
+          </article>
+
+          <article class="team-card">
+            <span class="team-avatar" aria-hidden="true">EJ</span>
+            <h3>Eugênio Junior</h3>
+            <p>Integrante do projeto</p>
+          </article>
+
+          <article class="team-card">
+            <span class="team-avatar" aria-hidden="true">JV</span>
+            <h3>João Victor</h3>
+            <p>Integrante do projeto</p>
+          </article>
+
+          <article class="team-card">
+            <span class="team-avatar" aria-hidden="true">VA</span>
+            <h3>Vinicius Alex</h3>
+            <p>Integrante do projeto</p>
+          </article>
+        </div>
+
+        <p class="team-note">
+          Projeto acadêmico e educacional, sem fins comerciais.
+        </p>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+      <div class="container cta-content">
+        <div>
+          <span class="section-label"> Faça parte da mudança </span>
+
+          <h2>Um futuro sustentável começa com pequenas atitudes.</h2>
+        </div>
+
+        <a href="index.html#descarte" class="btn btn-light"> Quero saber mais </a>
+      </div>
+    </section>
+
+    <!-- Botão flutuante do WhatsApp -->
     <a href="https://wa.me/5511999999999" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
-    aria-label="Entre em contato com a EcoTech pelo WhatsApp" title="Fale conosco pelo WhatsApp">
-    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
-  </a>
-</main>
+      aria-label="Entre em contato com a EcoTech pelo WhatsApp" title="Fale conosco pelo WhatsApp">
+      <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+    </a>
+  </main>
 
-  <footer class="footer"><div class="container footer-content"><div class="footer-brand"><a href="index.html" class="logo"><span class="logo-icon" aria-hidden="true">♻</span><span>Eco<span>Tech</span></span></a><p>Informação e conscientização para um futuro mais sustentável.</p></div><div class="footer-column"><h2>Navegação</h2><ul class="footer-links-list">
+  <!-- RODAPÉ -->
+  <footer id="contato" class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <span class="logo-icon" aria-hidden="true">♻</span>
+          <span>Eco<span>Tech</span></span>
+        </a>
+
+        <p>Informação e conscientização para um futuro mais sustentável.</p>
+      </div>
+
+      <div class="footer-column">
+        <h2>Navegação</h2>
+
+        <ul class="footer-links-list">
   <li><a href="index.html#inicio">Início</a></li>
-  <li><a href="sobre.html">Sobre</a></li>
+  <li><a href="sobre.html" aria-current="page">Sobre</a></li>
   <li><a href="projetos.html">Projetos</a></li>
   <li><a href="impacto.html">Impacto</a></li>
   <li><a href="galeria.html">Galeria</a></li>
@@ -143,53 +447,33 @@
   <li><a href="noticias.html">Notícias</a></li>
   <li><a href="orcamento_hospedagem.html">Hospedagem</a></li>
   <li><a href="acessibilidade.html">Acessibilidade</a></li>
-  <li><a href="contato.html" aria-current="page">Contato</a></li>
-</ul></div><div class="footer-column"><h2>Projeto</h2><p>Projeto acadêmico. A equipe indicada é formada pelos desenvolvedores; os canais de contato são demonstrativos.</p></div></div><div class="footer-bottom"><div class="container"><p>© 2026 EcoTech. Projeto acadêmico.</p></div></div></footer>
+  <li><a href="contato.html">Contato</a></li>
+</ul>
+      </div>
+
+      <div class="footer-column">
+        <h2>Projeto</h2>
+
+        <p>
+          Projeto acadêmico desenvolvido para a disciplina de Desenvolvimento
+          Web.
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2026 EcoTech. Projeto acadêmico.</p>
+      </div>
+    </div>
+  </footer>
+
   <script src="funcionalidades/index.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@5/dist/email.min.js"></script>
-  <script>
-    const contactForm = document.getElementById('contact-form');
-    const contactDate = document.getElementById('contactDate');
-    const statusMessage = document.getElementById('form-status');
-    const submitButton = contactForm.querySelector('button[type="submit"]');
-    const originalButtonMarkup = submitButton.innerHTML;
-    const now = new Date();
-    contactDate.min = new Date(now.getTime() - now.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
-
-    if (window.emailjs) {
-      window.emailjs.init({ publicKey: 'TN5oevceJBV_cUchJ' });
-    }
-
-    contactForm.addEventListener('submit', async (event) => {
-      event.preventDefault();
-      statusMessage.textContent = 'Enviando sua mensagem...';
-      statusMessage.hidden = false;
-      submitButton.disabled = true;
-      submitButton.textContent = 'Enviando...';
-
-      try {
-        if (!window.emailjs) {
-          throw new Error('O SDK do serviço de envio não foi carregado.');
-        }
-
-        await window.emailjs.sendForm('service_uwvyqeg', 'template_5o4muqo', contactForm);
-        statusMessage.textContent = 'Mensagem enviada com sucesso! A equipe EcoTech responderá em breve.';
-        contactForm.reset();
-      } catch (error) {
-        console.error('Falha no envio do formulário EcoTech.', error);
-        if (error?.status === 412 && /insufficient authentication scopes/i.test(error?.text || '')) {
-          statusMessage.textContent = 'A conta Gmail conectada ao serviço de envio precisa ser autorizada novamente no EmailJS. Nenhuma mensagem foi enviada.';
-        } else {
-          statusMessage.textContent = 'Não foi possível enviar sua mensagem agora. Tente novamente mais tarde.';
-        }
-      } finally {
-        submitButton.disabled = false;
-        submitButton.innerHTML = originalButtonMarkup;
-        statusMessage.focus();
-      }
-    });
-  </script>
   <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+     <script src="js/header.js" defer></script>
+</body>
+
+</html>
      <script src="js/header.js" defer></script>
 </body>
 </html>
